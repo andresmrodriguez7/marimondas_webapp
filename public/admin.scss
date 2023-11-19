@@ -1,303 +1,301 @@
 header {
-  background-color: rgb(53, 202, 187);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  padding: 0px 35px;
-  #brand {
-    width: 200px;
-    line-height: 80px;
-    font-family: "Nunito", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-  }
-  #fecha-hoy {
-    color: white;
-    margin: 0px 20px;
-    font-family: "Nunito", sans-serif;
-  }
-  nav {
-    ul {
-      display: flex;
-      flex-flow: row nowrap;
-      margin-top: 18px;
-      li {
-        list-style: none;
-        margin: 0px 20px;
-        text-decoration: none;
-        color: white;
+    background-color: rgb(53, 202, 187);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0px 35px;
+    #brand {
+        width: 200px;
+        line-height: 80px;
         font-family: "Nunito", sans-serif;
+        font-size: 24px;
         font-weight: 600;
-        font-size: 14px;
-        line-height: 40px;
-        cursor: pointer;
-        &:hover {
-          text-shadow: 0px 0px 5px white;
-        }
-        .btn-secondary {
-          background-color: white;
-          color: #e6621f;
-          border-radius: 20px;
-          line-height: 40px;
-          text-align: center;
-          font-weight: 600;
-          width: 200px;
-          border-bottom: none;
-        }
-        &:last-child {
-          font-size: 18px;
-          color: white;
-        }
-      }
+        color: white;
     }
-  }
+    #fecha-hoy {
+        color: white;
+        margin: 0px 20px;
+        font-family: "Nunito", sans-serif;
+    }
+    nav {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-top: 18px;
+            li {
+                list-style: none;
+                margin: 0px 20px;
+                text-decoration: none;
+                color: white;
+                font-family: "Nunito", sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 40px;
+                cursor: pointer;
+                &:hover {
+                    text-shadow: 0px 0px 5px white;
+                }
+                .btn-secondary {
+                    background-color: white;
+                    color: #e6621f;
+                    border-radius: 20px;
+                    line-height: 40px;
+                    text-align: center;
+                    font-weight: 600;
+                    width: 200px;
+                    border-bottom: none;
+                }
+                &:last-child {
+                    font-size: 18px;
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 #code-container {
-  margin: auto 30%;
+    margin: auto 30%;
 }
 
 #table-usuarios {
-  display: flex;
-  flex-flow: wrap;
-  width: 65%;
-  margin: auto;
-  height: 100%;
-  display: none;
+    display: flex;
+    flex-flow: wrap;
+    width: 65%;
+    margin: auto;
+    height: 100%;
+    display: none;
 }
 
 #product-creator {
-  padding: 3%;
-  display: none;
-  #buscador-container {
-    #spinner {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 1000;
+    padding: 3%;
+    display: none;
+    #buscador-container {
+        #spinner {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1000;
+        }
     }
-  }
-  .form-label {
-    font-family: "Nunito", sans-serif;
-  }
-  .btn-container {
-    display: flex;
-    flex-direction: row;
-    .crear {
-      background-color: #35cabb;
-      color: white;
-      border-radius: 20px;
-      line-height: 40px;
-      text-align: center;
-      font-weight: 600;
-      width: 250px;
-      margin: 0px 10px;
-      cursor: pointer;
-      &:hover {
-        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-      }
+    .form-label {
+        font-family: "Nunito", sans-serif;
     }
-    .borrar {
-      background-color: #e6621f;
-      color: white;
-      border-radius: 20px;
-      line-height: 40px;
-      text-align: center;
-      font-weight: 600;
-      width: 250px;
-      cursor: pointer;
-      &:hover {
-        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-      }
-    }
-  }
-}
-
-@keyframes deploy {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 25%;
-  }
-}
-
-#tallas {
-  display: none;
-  flex-flow: row nowrap;
-  gap: 30px;
-  width: 90%;
-  margin: 40px auto;
-  iframe {
-    width: 420px;
-    height: 340px;
-  }
-}
-
-#abonos-section {
-  display: none;
-  flex-flow: row nowrap;
-  gap: 30px;
-  width: 90%;
-  margin: 40px auto;
-  iframe {
-    width: 420px;
-    height: 340px;
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    width: 100%;
-    background-color: rgb(53, 202, 187);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    padding: 0px 5px;
-    text-align: center;
-    #brand {
-      width: 100%;
-      line-height: 80px;
-      font-family: "Nunito", sans-serif;
-      font-size: 21px;
-      text-align: center;
-      font-weight: bold;
-    }
-    #fecha-hoy {
-      color: white;
-      margin: 0px 5px;
-      font-family: "Nunito", sans-serif;
-    }
-    nav {
-      margin: 0px;
-      ul {
-        padding: 0px;
+    .btn-container {
         display: flex;
-        flex-flow: column nowrap;
-        align-content: center;
-        li {
-          list-style: none;
-          margin: 0px 0px;
-          text-decoration: none;
-          color: white;
-          font-family: "Nunito", sans-serif;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 30px;
-          cursor: pointer;
-          &:hover {
-            text-shadow: 0px 0px 5px white;
-          }
-          .btn-secondary {
-            background-color: white;
-            color: #e6621f;
+        flex-direction: row;
+        .crear {
+            background-color: #35cabb;
+            color: white;
             border-radius: 20px;
             line-height: 40px;
             text-align: center;
             font-weight: 600;
-            width: 200px;
-            border-bottom: none;
-            margin: auto;
-          }
-          &:last-child {
-            font-size: 15px;
+            width: 250px;
+            margin: 0px 10px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+            }
+        }
+        .borrar {
+            background-color: #e6621f;
             color: white;
-            margin-top: 10px;
-          }
+            border-radius: 20px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: 600;
+            width: 250px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+            }
         }
-      }
     }
-  }
+}
 
-  #code-container {
-    margin: auto 5%;
-  }
+@keyframes deploy {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 25%;
+    }
+}
 
-  #table-usuarios {
-    display: flex;
+#tallas {
+    display: none;
+    flex-flow: row nowrap;
+    gap: 30px;
+    width: 95%;
+    margin: 20px auto;
+    iframe {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+#abonos-section {
+    display: none;
+    flex-flow: row wrap;
+    gap: 20px;
     width: 90%;
-    height: 100%;
-    margin: auto;
-    display: none;
-  }
-  #product-creator {
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 3%;
-    display: none;
-    #buscador-container {
-      #spinner {
-        display: none;
-        position: fixed;
-        top: 45%;
-        left: 30%;
-        z-index: 1000;
-      }
+    margin: 40px auto;
+    iframe {
+        width: 400px;
+        height: 320px;
     }
-    .form-label {
-      font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        background-color: rgb(53, 202, 187);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 0px 5px;
+        text-align: center;
+        #brand {
+            width: 100%;
+            line-height: 80px;
+            font-family: "Nunito", sans-serif;
+            font-size: 21px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #fecha-hoy {
+            color: white;
+            margin: 0px 5px;
+            font-family: "Nunito", sans-serif;
+        }
+        nav {
+            margin: 0px;
+            ul {
+                padding: 0px;
+                display: flex;
+                flex-flow: column nowrap;
+                align-content: center;
+                li {
+                    list-style: none;
+                    margin: 0px 0px;
+                    text-decoration: none;
+                    color: white;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 30px;
+                    cursor: pointer;
+                    &:hover {
+                        text-shadow: 0px 0px 5px white;
+                    }
+                    .btn-secondary {
+                        background-color: white;
+                        color: #e6621f;
+                        border-radius: 20px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-weight: 600;
+                        width: 200px;
+                        border-bottom: none;
+                        margin: auto;
+                    }
+                    &:last-child {
+                        font-size: 15px;
+                        color: white;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
     }
-    .btn-container {
-      display: flex;
-      flex-direction: column;
-      .crear {
-        background-color: #35cabb;
-        color: white;
-        border-radius: 20px;
-        line-height: 40px;
-        text-align: center;
-        font-weight: 600;
-        width: 250px;
-        margin: 20px auto;
-        cursor: pointer;
-      }
-      .borrar {
-        color: white;
-        border-radius: 20px;
-        line-height: 40px;
-        text-align: center;
-        font-weight: 600;
-        width: 250px;
+    #code-container {
+        margin: auto 5%;
+    }
+    #table-usuarios {
+        display: flex;
+        width: 90%;
+        height: 100%;
         margin: auto;
-        background-color: #e6621f;
-        cursor: pointer;
-        &:hover {
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+    #product-creator {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 3%;
+        display: none;
+        #buscador-container {
+            #spinner {
+                display: none;
+                position: fixed;
+                top: 45%;
+                left: 30%;
+                z-index: 1000;
+            }
         }
-      }
+        .form-label {
+            font-family: "Nunito", sans-serif;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            .crear {
+                background-color: #35cabb;
+                color: white;
+                border-radius: 20px;
+                line-height: 40px;
+                text-align: center;
+                font-weight: 600;
+                width: 250px;
+                margin: 20px auto;
+                cursor: pointer;
+            }
+            .borrar {
+                color: white;
+                border-radius: 20px;
+                line-height: 40px;
+                text-align: center;
+                font-weight: 600;
+                width: 250px;
+                margin: auto;
+                background-color: #e6621f;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        #talla-selector {
+            display: flex;
+            flex-flow: column;
+            label {
+                margin-top: 5px !important;
+            }
+        }
     }
-    #talla-selector {
-      display: flex;
-      flex-flow: column;
-      label {
-        margin-top: 5px !important;
-      }
+    #tallas {
+        display: none;
+        flex-flow: column nowrap;
+        gap: 30px;
+        width: 85%;
+        margin: 40px auto;
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin: auto;
+        }
     }
-  }
-  #tallas {
-    display: none;
-    flex-flow: column nowrap;
-    gap: 30px;
-    width: 90%;
-    margin: 40px auto;
-    iframe {
-      width: 300px;
-      height: 300px;
-      margin: auto;
+    #abonos-section {
+        display: none;
+        flex-flow: column nowrap;
+        gap: 30px;
+        width: 85%;
+        margin: 40px auto;
+        iframe {
+            width: 100%;
+            height: 400px;
+            margin: auto;
+        }
     }
-  }
-  #abonos-section {
-    display: none;
-    flex-flow: column nowrap;
-    gap: 30px;
-    width: 90%;
-    margin: 40px auto;
-    iframe {
-      width: 300px;
-      height: 300px;
-      margin: auto;
-    }
-  }
 }

@@ -172,29 +172,29 @@ header nav ul li:last-child {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   gap: 30px;
-  width: 90%;
-  margin: 40px auto;
+  width: 95%;
+  margin: 20px auto;
 }
 
 #tallas iframe {
-  width: 420px;
-  height: 340px;
+  width: 400px;
+  height: 500px;
 }
 
 #abonos-section {
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  gap: 30px;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 20px;
   width: 90%;
   margin: 40px auto;
 }
 
 #abonos-section iframe {
-  width: 420px;
-  height: 340px;
+  width: 400px;
+  height: 320px;
 }
 
 @media (max-width: 600px) {
@@ -359,12 +359,12 @@ header nav ul li:last-child {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     gap: 30px;
-    width: 90%;
+    width: 85%;
     margin: 40px auto;
   }
   #tallas iframe {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 500px;
     margin: auto;
   }
   #abonos-section {
@@ -374,12 +374,12 @@ header nav ul li:last-child {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     gap: 30px;
-    width: 90%;
+    width: 85%;
     margin: 40px auto;
   }
   #abonos-section iframe {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 400px;
     margin: auto;
   }
 }
