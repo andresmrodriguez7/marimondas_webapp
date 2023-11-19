@@ -257,6 +257,8 @@ main #description .social_media_icon_cont .social-icon a i {
 main #description #camisetaPremier {
   width: 90%;
   height: 550px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 main #description .btn-primary1 {
@@ -875,13 +877,15 @@ footer .disclaimer p:first-child {
     font-size: 2em;
   }
   main #description #camisetaPremier {
-    width: 20%;
-    height: 400px;
+    width: auto;
+    height: 550px;
     position: absolute;
     margin-top: 120px;
     right: 50px;
     -webkit-box-shadow: 1px 1px 20px gray;
             box-shadow: 1px 1px 20px gray;
+    overflow: hidden;
+    border-radius: 10px;
   }
   main #description .btn-primary1 {
     margin-top: 120px;
