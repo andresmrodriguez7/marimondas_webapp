@@ -301,6 +301,7 @@ server.post("/login", async(req, res) => {
     const credentials = [
         { email: "lesly-morales@hotmail.com", password: "Marimondas10", role: "admin" },
         { email: "acmesarodriguez@gmail.com", password: "camiloandres", role: "user" },
+        { email: "oricacyanideassist@gmail.com", password: "sebasmesa", role: "user" },
         // Agrega más credenciales según necesites
     ];
 
