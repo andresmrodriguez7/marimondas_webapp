@@ -37,6 +37,7 @@ const Usuarios = mongoose.model("usuarios", {
     saldo: Number,
     codigo: String,
     kit: String,
+    bolsillo: String,
 });
 
 const Codigos = mongoose.model("codigos", {
@@ -46,6 +47,7 @@ const Codigos = mongoose.model("codigos", {
     status: Number,
     categoria: String,
     referencia: String,
+    bolsillo: String,
 });
 
 const rsNinos = mongoose.model("marimonditas", {
@@ -74,7 +76,7 @@ server.post("/newcode", noRepeatCode, (req, res) => {
     rsCodigo.save();
     let respuesta = {
         status: "OK",
-        descripcion: `El codigo ${nuevoCodigo.codigo} ha sido ACTIVADO, ha sido copiado al portapapeles, envíelo a su usuario.`,
+        descripcion: `El codigo ${nuevoCodigo.codigo} ha sido ACTIVADO, se ha copiado al portapapeles, envíelo a su usuario. El dinero de esta inscripción se ha asignado a  ${nuevoCodigo.bolsillo}`,
     };
     res.json(respuesta);
 });
@@ -92,7 +94,7 @@ server.post("/usedcode", (req, res) => {
             console.log(`No se puede conectar al servidor de mongo ${uri}`);
             process.exit(1);
         }
-        // si no hay error consultar los estudiantes con el id proporcionado
+        // si no hay error consultar los codigos con el id proporcionado
         con
             .db("AcamicaDB")
             .collection("codigos")
@@ -236,6 +238,7 @@ server.post("/registrar", noRepeat, (req, res) => {
         pago: req.body.pago,
         saldo: req.body.saldo,
         codigo: req.body.codigo,
+        bolsillo: req.body.bolsillo,
     };
     console.log(usuarioNuevo);
     const rsUsuario = new Usuarios(usuarioNuevo);
@@ -244,7 +247,6 @@ server.post("/registrar", noRepeat, (req, res) => {
         status: "Ok",
         descripcion: `Listo ${rsUsuario.nombres}, ¡inscripción exitosa!`,
         mensaje: `Bienvenido a las Marimondas del Barrio Abajo, esperamos que lo disfrutes, porque quien lo vive es quien lo goza!`,
-        usuario: rsUsuario,
     };
     res.json(respuesta);
 });
@@ -387,6 +389,7 @@ server.post("/modificar", async(req, res) => {
                     zapato: req.body.zapato,
                     grupo: req.body.grupo,
                     kit: req.body.kit,
+                    bolsillo: req.body.bolsillo,
                 },
             });
         let respuesta = {

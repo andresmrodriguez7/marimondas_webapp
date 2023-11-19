@@ -56,10 +56,20 @@
                 <span class="input-group-text">Referencia</span>
                 <input type="text" id="referencia" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" />
             </div>
+            <select class="form-select input-group mb-3" id="bolsillo" aria-label="Default select example">
+              <option disabled selected>Escoja un bolsillo</option>
+              <option value="mayores">Bancolombia Lesly</option>
+              <option value="mayores">Bancolombia Patricia</option>
+              <option value="mayores">Efectivo Lesly</option>
+              <option value="mayores">Efectivo Patricia</option>
+              <option value="mayores">Nequi Lesly</option>
+              <option value="mayores">Nequi Patricia</option>
+              <option value="mayores">Otro</option>
+            </select>
             <select class="form-select input-group mb-3" id="categoria" aria-label="Default select example">
-              <option disabled selected>¿Para quien es este código?</option>
-              <option value="mayores">Marimondas</option>
-              <option value="niños">Marimonditas</option>
+              <option disabled selected>Asigne categoría</option>
+              <option value="mayores">Mayores</option>
+              <option value="niños">Niños</option>
             </select>
             <div class="input-group mb-3">
                 <input type="text" id="nuevoCodigo" class="form-control" placeholder="nuevo código" style="text-transform: uppercase" value="" onkeyup="javascript:this.value=this.value.toUpperCase();" />
@@ -140,23 +150,25 @@
           </label>
                 <input type="number" class="form-control-short" id="search-id" style="border-radius: 5px" />
                 <input class="btn btn-outline-success" id="search-btn" type="button" value="Buscar" />
-                <div id="spinner" class="spinner-border m-5" role="status"></div>
-            </div>
+                <div id="spinner" style="display: none;" class="spinner-grow" role="status">
+                </div>
+                <!-- <div id="spinner" class="spinner-border m-5" role="status"></div>
+            </div> -->
 
-            <div class="mb-3">
-                <p>
-                    <strong style="font-size: 20px" id="buscado-name"></strong>
+                <div class="mb-3">
+                    <p>
+                        <strong style="font-size: 20px" id="buscado-name"></strong>
 
-                    <strong style="font-size: 20px" id="buscado-primerApellido"></strong>
-                </p>
-                <i style="font-size: 15px" id="buscado-inscripcion"></i>
-                <i style="font-size: 15px" id="buscado-saldo"></i>
-            </div>
+                        <strong style="font-size: 20px" id="buscado-primerApellido"></strong>
+                    </p>
+                    <i style="font-size: 15px" id="buscado-inscripcion"></i>
+                    <i style="font-size: 15px" id="buscado-saldo"></i>
+                </div>
 
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">e-mail</label
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">e-mail</label
           >
-          <input type="text" class="form-control" id="buscado-email" />
+          <input type="text"  id="buscado-email" />
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
@@ -224,9 +236,23 @@
           >
           <select name="kit" id="buscado-kit">
             <option value="Default">-</option>
-            <option value="Entregado">ENTREGADO</option>
-            <option value="Pendiente">PENDIENTE</option>
+            <option value="ENTREADO">ENTREGADO</option>
+            <option value="PENDIENTE">PENDIENTE</option>
           </select>
+          <label for="exampleFormControlInput1" class="form-label"
+            >Bolsillo:</label
+          >
+          <select name="bolsillo" id="buscado-bolsillo" aria-label="Default select example">
+            <option value="Default">-</option>
+            <option value="Bancolombia Lesly">Bancolombia Lesly</option>
+            <option value="Bancolombia Patricia">Bancolombia Patricia</option>
+            <option value="Efectivo Lesly">Efectivo Lesly</option>
+            <option value="Efectivo Patricia">Efectivo Patricia</option>
+            <option value="Nequi Lesly">Nequi Lesly</option>
+            <option value="Nequi Patricia">Nequi Patricia</option>
+            <option value="Otro">Otro</option>
+          </select>
+          
         </div>
         <br />
         <div class="btn-container">
@@ -283,6 +309,7 @@
           height="340"
           src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=a45100b6-fba8-4e55-bd50-fe1d0d9b3757&maxDataAge=&60theme=light&autoRefresh=true"
         ></iframe>
+        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=655a7821-a574-4836-83b3-affc62d7ab7f&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
         <hr />
         <!-- estadisticas de las marimonditas -->
         <iframe

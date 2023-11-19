@@ -47,6 +47,7 @@ async function verificarCodigo(params) {
         localStorage.setItem("abono", json.data.abono);
         localStorage.setItem("codigo", json.data.codigo);
         localStorage.setItem("saldo", balance);
+        localStorage.setItem("bolsillo", json.data.bolsillo);
     }
     if (json.status == "Error") {
         alert(json.descripcion);
@@ -96,6 +97,7 @@ btnRegistrar.addEventListener("click", () => {
     let valorPago = Number(localStorage.getItem("pago"));
     let valorSaldo = Number(localStorage.getItem("saldo"));
     let valorCodigo = localStorage.getItem("codigo");
+    let valorBolsillo = localStorage.getItem("bolsillo");
     console.log(valorPago);
     let nuevoUsuario = {
         nombres: nombres.value,
@@ -118,6 +120,7 @@ btnRegistrar.addEventListener("click", () => {
         pago: valorPago,
         saldo: valorSaldo,
         codigo: valorCodigo,
+        bolsillo: valorBolsillo,
     };
     console.log(nuevoUsuario);
     if (

@@ -78,17 +78,41 @@ let newProductBtn = document.getElementById("crear-producto-btn");
 
 let nameBuscado = document.getElementById("search-name");
 let spinner = document.getElementById("spinner");
-
 let idBuscado = document.getElementById("search-id");
+
 newSearchBtn.addEventListener("click", () => {
-    spinner.style.display = "flex";
+
     let userData = {
         numDocumento: idBuscado.value,
     };
-    obtenerBuscado(userData);
-});
+
+    try {
+        obtenerBuscado(userData);
+    } catch (error) {
+        console.error("Error al obtener la información buscada:", error);
+        // Puedes agregar aquí la lógica para manejar el error, como mostrar un mensaje al usuario
+    }
+})
+
+let nombreBuscado = document.getElementById("buscado-name");
+let primerApellidoBuscado = document.getElementById("buscado-primerApellido");
+let segundoApellidoBuscado = document.getElementById("buscado-segundoApellido");
+let inscripcionBuscado = document.getElementById("buscado-inscripcion");
+let saldoBuscado = document.getElementById("buscado-saldo");
+let inputEmailBuscado = document.getElementById("buscado-email");
+let inputAbonoBuscado = document.getElementById("buscado-abono");
+let inputKitBuscado = document.getElementById("buscado-kit");
+let inputBolsilloBuscado = document.getElementById("buscado-bolsillo");
+let inputEntregaDisfrazBuscado = document.getElementById(
+    "buscado-disfraz-entregado"
+);
+let inputDisfrazBuscado = document.getElementById("talla-disfraz");
+let inputCamisetaBuscado = document.getElementById("talla-camiseta");
+let inputZapatoBuscado = document.getElementById("talla-zapatos");
+let inputGrupoBuscado = document.getElementById("talla-grupo");
 
 let obtenerBuscado = async function getBuscado(userData) {
+    spinner.style.display = "flex";
     try {
         let response = await fetch("/buscar", {
             method: "POST",
@@ -98,8 +122,9 @@ let obtenerBuscado = async function getBuscado(userData) {
             body: JSON.stringify(userData),
         });
         let jsonBuscado = await response.json();
-        spinner.style.display = "none";
+
         if (jsonBuscado.status === 200) {
+            spinner.style.display = "none";
             console.log(jsonBuscado.usuario);
             inputAbonoBuscado.value = jsonBuscado.usuario.abono;
             nombreBuscado.innerHTML = jsonBuscado.usuario.nombres;
@@ -108,6 +133,7 @@ let obtenerBuscado = async function getBuscado(userData) {
             saldoBuscado.innerHTML = ` | Saldo: $${jsonBuscado.usuario.saldo}`;
             inputEmailBuscado.value = jsonBuscado.usuario.email;
             inputKitBuscado.value = jsonBuscado.usuario.kit;
+            inputBolsilloBuscado.value = jsonBuscado.usuario.bolsillo;
 
             let optionDisfraz = document.createElement("option");
             optionDisfraz.value = jsonBuscado.usuario.disfraz;
@@ -149,38 +175,34 @@ let obtenerBuscado = async function getBuscado(userData) {
                 inputGrupoBuscado.childNodes[0]
             );
 
-
             let optionKit = document.createElement("option");
             optionKit.value = jsonBuscado.usuario.kit;
-            optionKit.innerHTML = `${jsonBuscado.usuario.grupo}`;
+            optionKit.innerHTML = `${jsonBuscado.usuario.kit}`;
             optionKit.setAttribute("selected", "");
-            inputGrupoBuscado.removeChild(inputGrupoBuscado.childNodes[0]);
-            inputGrupoBuscado.insertBefore(
+            inputKitBuscado.removeChild(inputKitBuscado.childNodes[0]);
+            inputKitBuscado.insertBefore(
                 optionKit,
-                inputGrupoBuscado.childNodes[0]
+                inputKitBuscado.childNodes[0]
+            );
+
+            let optionBolsillo = document.createElement("option");
+            optionBolsillo.value = jsonBuscado.usuario.bolsillo;
+            optionBolsillo.innerHTML = `${jsonBuscado.usuario.bolsillo}`;
+            optionBolsillo.setAttribute("selected", "");
+            inputBolsilloBuscado.removeChild(inputBolsilloBuscado.childNodes[0]);
+            inputBolsilloBuscado.insertBefore(
+                optionBolsillo,
+                inputBolsilloBuscado.childNodes[0]
             );
         }
         localStorage.setItem("enVista", JSON.stringify(jsonBuscado.usuario));
     } catch (error) {
-        alert("No hay usuarios con esa identificación");
+        spinner.style.display = "none";
+        alert("Error al obtener la información buscada: No hay usuarios con esa identificación");
     }
 };
 
-let nombreBuscado = document.getElementById("buscado-name");
-let primerApellidoBuscado = document.getElementById("buscado-primerApellido");
-let segundoApellidoBuscado = document.getElementById("buscado-segundoApellido");
-let inscripcionBuscado = document.getElementById("buscado-inscripcion");
-let saldoBuscado = document.getElementById("buscado-saldo");
-let inputEmailBuscado = document.getElementById("buscado-email");
-let inputAbonoBuscado = document.getElementById("buscado-abono");
-let inputKitBuscado = document.getElementById("buscado-kit");
-let inputEntregaDisfrazBuscado = document.getElementById(
-    "buscado-disfraz-entregado"
-);
-let inputDisfrazBuscado = document.getElementById("talla-disfraz");
-let inputCamisetaBuscado = document.getElementById("talla-camiseta");
-let inputZapatoBuscado = document.getElementById("talla-zapatos");
-let inputGrupoBuscado = document.getElementById("talla-grupo");
+
 let modificarBtn = document.getElementById("modificar-btn");
 
 modificarBtn.addEventListener("click", async(e) => {
@@ -194,6 +216,7 @@ modificarBtn.addEventListener("click", async(e) => {
     enVista.zapato = inputZapatoBuscado.value;
     enVista.grupo = inputGrupoBuscado.value;
     enVista.kit = inputKitBuscado.value;
+    enVista.bolsillo = inputBolsilloBuscado.value;
     enVista.saldo = Number(enVista.pago) - inputAbonoBuscado.value;
     localStorage.setItem("enVista", JSON.stringify(enVista));
     let response = await fetch("/modificar", {
@@ -204,8 +227,8 @@ modificarBtn.addEventListener("click", async(e) => {
         body: JSON.stringify(enVista),
     });
     let status = await response.json();
-    window.alert(status.mensaje);
     spinner.style.display = "none";
+    window.alert(status.mensaje);
 });
 
 let borrarBtn = document.getElementById("borrar-btn");
@@ -260,6 +283,7 @@ crearBtn.addEventListener("click", async() => {
         abono: abono.value,
         categoria: categoria.value,
         referencia: referencia.value,
+        bolsillo: bolsillo.value,
         status: 200,
     };
     let response = await fetch("/newcode", {
