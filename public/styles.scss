@@ -1,0 +1,12 @@
+@import "./parciales/variables";
+// sección header
+@import "./parciales/header";
+// sección main
+@import "./parciales/main";
+// sección footer
+@import "./parciales/footer";
+@media screen and (min-width: 1023px) {
+  @import "./parcialesmedia/headermedia";
+  @import "./parcialesmedia/mainmedia";
+  @import "./parcialesmedia/footermedia";
+}

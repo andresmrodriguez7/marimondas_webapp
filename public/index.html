@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JMH5801LW7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-JMH5801LW7");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Somos la comparsa de tradición más grande del Carnaval de Barranquilla fundada por Paragüita Morales (QEPD) en 1984, ganadores de 35 Congos de Oro. Nuestro disfraz es conocido como el aporte más original de barranquilla a su Fiesta, creado
+                por el verdadero mamador de gallo barranquillero." />
+    <meta name="keywords" content="marimonda, barrio, abajo, paraguita, comparsa, carnaval, barranquilla" />
+    <title>Marimondas del Barrio Abajo de Paraguita | 40 años</title>
+    <link rel="shortcut icon" href="/iconoWeb.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <script src="./push.min.js"> -->
+</head>
+
+<body>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script> -->
+    <!-- <script src="./nieve.js"></script> -->
+    <!-- <script>
+            $(document).ready(function() {
+                $.fn.snow();
+            });
+        </script> -->
+
+    <header>
+        <img class="logo_menu" src="./imagenes/mdba.png" alt="logo" />
+        <div>
+            <input type="checkbox" name="menu" id="menu_checker" />
+            <label id="menu_open" for="menu_checker">
+          <i class="fas fa-bars"></i>
+        </label>
+            <label id="menu_close" for="menu_checker">
+          <i class="fas fa-times"></i>
+        </label>
+            <nav id="menu">
+                <ul class="secciones">
+                    <li>
+                        <a href="#">inicio</a>
+                    </li>
+                    <li>
+                        <a href="#nosotros">nosotros</a>
+                    </li>
+                    <li>
+                        <a href="#faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#sede">sede</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">Admin</a>
+                    </li>
+                    <!-- <li><a href="#titulo_seccion_dark3">patrocinadores</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- modal de la inscripcion de los niños -->
+    <div class="modal" id="signUpModal-niños" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Inscripción Marimonditas</h3>
+                    <button type="button" class="btn-close" id="modalCloser-niños" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"> -->
+                <div class="modal-body">
+                    <h5 class="modal-title">Código de inscripción</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control-sm" id="code-niños" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon3">
+                Verificar
+              </button>
+                        <div id="warning" class="form-text">
+                            <i>Ingresa y verifica tu código. Te diremos si es válido.</i>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <form style="display: none" id="formulario-niños" class="needs-validation" novalidate>
+                        <h3 id="pago-total-niños" class="modal-title">Pago total: $-</h3>
+                        <i id="abono-niños">Abono: $-</i>
+                        <p><i id="saldo-niños">Saldo: $-</i></p>
+
+                        <hr />
+                        <h5 class="modal-title">Información del niño</h5>
+                        <br />
+                        <div class="mb-3">
+                            <label for="nombres-niños" class="form-label">Nombres*</label>
+                            <input type="text" class="form-control" id="nombres-niños" required placeholder="ej. Lesly Salsy" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="first-apellido-niños" class="form-label">Primer apellido*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-apellido-niños"
+                  required
+                  placeholder="ej. Morales"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="second-apellido-niños" class="form-label"
+                  >Segundo apellido*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="second-apellido-niños"
+                  placeholder="ej. Gomez"
+                />
+              </div>
+              <div>
+                <select
+                  id="documento-niños"
+                  class="form-select-sm"
+                  aria-label="Default select example"
+                >
+                  <option disabled selected>Tipo de documento</option>
+                  <option value="TI">Tarjeta de identidad</option>
+                  <option value="RC">Registro civil</option>
+                </select>
+              </div>
+              <br />
+              <div class="mb-3">
+                <label for="numDocumento-niños" class="form-label"
+                  >Número de documento*</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numDocumento-niños"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="fechaNacimiento-niños" class="form-label"
+                  >Fecha de nacimiento*</label
+                >
+                <input
+                  type="date"
+                  class="form-control-sm"
+                  id="fechaNacimiento-niños"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="edad-niños" class="form-label">Edad*</label>
+                            <p>
+                                <input type="number" min="18" max="120" class="form-control-sm" id="edad-niños" />
+                            </p>
+                        </div>
+                        <div>
+                            <h6 class="modal-title">Disfraz</h6>
+                            <select id="disfraz-niños" class="form-select-sm" aria-label="Default select example">
+                  <option disabled selected>Selecciona tu talla</option>
+                  <option value="Bebe">Bebé</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="S">S</option>
+                </select>
+                        </div>
+
+                        <br />
+                        <div>
+                            <h6 class="modal-title">Camiseta de ensayo</h6>
+                            <select id="camEnsayo-niños" class="form-select-sm" aria-label="Default select example">
+                  <option disabled selected>Selecciona tu talla</option>
+                  <option value="Bebe">Bebé</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="S">S</option>
+                </select>
+                        </div>
+                        <br />
+                        <h5 class="modal-title">Información del acudiente</h5>
+                        <div class="mb-3">
+                            <label for="nombres-acudiente" class="form-label">Primer Nombre*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombres-acudiente"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellidos-acudiente" class="form-label"
+                  >Primer Apellido*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellidos-acudiente"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email-acudiente" class="form-label"
+                  >Correo electrónico*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-acudiente"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="celular-acudiente" class="form-label"
+                  >Celular*</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="celular-acudiente"
+                  aria-describedby="emailHelp"
+                />
+                <div class="form-text">
+                  <i> Núnca compartiremos tu información personal </i>
+                </div>
+              </div>
+
+              <!-- <button type="submit" class="btn btn-primary">ENVIAR</button> -->
+              <div class="modal-footer">
+                <button
+                  id="btnRegistrar-niños"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-target="#exampleModalToggle-niños"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                        
+                >
+                  Inscribirme
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div
+            class="modal fade"
+            id="exampleModalToggle-niños"
+            aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title Toggle2" id="modalTitle-niños"></h5>
+                  <button
+                    type="button"
+                    id="exit"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body" id="modalBody-niños"></div>
+                <div class="modal-footer">
+                  <button
+                    class="btn btn-primary"
+                    id="entendido-niños"
+                    aria-label="Close"
+                    data-bs-dismiss="modal"
+                  >
+                    Entendido
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal de la inscripcion de los adultos -->
+    <div class="modal" id="signUpModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Pre-Inscripción</h3>
+            <button
+              type="button"
+              class="btn-close"
+              id="modalCloser"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"> -->
+          <div class="modal-body">
+            <h5 class="modal-title">Código de inscripción</h5>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control-sm"
+                id="code"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                Verificar
+              </button>
+              <div id="emailHelp" class="form-text">
+                <i>Ingresa y verifica tu código. Te diremos si es válido.</i>
+              </div>
+            </div>
+            <form
+              id="formulario-adultos"
+              class="needs-validation"
+              style="display: none"
+              novalidate
+            >
+              <hr />
+              <h3 id="pago-total" class="modal-title">Pago total: $-</h3>
+              <i id="abono">Abono: $-</i>
+              <p><i id="saldo">Saldo: $-</i></p>
+
+              <hr />
+              <h5 class="modal-title">Información Personal</h5>
+              <br />
+              <div class="mb-3">
+                <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="first-apellido" class="form-label">Primer apellido*</label
+                >
+                <input type="text" class="form-control" id="first-apellido" />
+              </div>
+              <div class="mb-3">
+                <label for="second-apellido" class="form-label"
+                  >Segundo apellido</label
+                >
+                <input type="text" class="form-control" id="second-apellido" />
+              </div>
+
+              <select
+                id="documento"
+                class="form-select-sm"
+                aria-label="Default select example"
+              >
+                <option disabled selected>Tipo documento de identidad</option>
+                <option value="Cedula">Cédula ciudadanía</option>
+                <option value="TI">Tarjeta de identidad</option>
+                <option value="CE">Cedula de extranjería</option>
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <br />
+              <div class="mb-3">
+                <label for="numDocumento" class="form-label"
+                  >Número de documento*</label
+                >
+                <input type="number" class="form-control" id="numDocumento" />
+              </div>
+
+              <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label"
+                  >Fecha de nacimiento</label
+                >
+                <input
+                  type="date"
+                  class="form-control-sm"
+                  id="fechaNacimiento"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="edad" class="form-label">Edad</label>
+                            <p>
+                                <input type="number" min="15" max="120" class="form-control-sm" id="edad" />
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ciudadResidencia" class="form-label">Ciudad de residencia*</label
+                >
+                <input type="text" class="form-control" id="ciudadResidencia" />
+              </div>
+              <div class="mb-3">
+                <label for="empresa" class="form-label"
+                  >Empresa donde trabaja</label
+                >
+                <input type="text" class="form-control" id="empresa" />
+              </div>
+              <div class="mb-3">
+                <label for="trayectoria" class="form-label"
+                  >¿Cuantos años tienes en la comparsa?</label
+                >
+                <p>
+                  <input
+                    type="number"
+                    class="form-control-sm"
+                    id="trayectoria"
+                    value="0"
+                  />
+                </p>
+                <div class="form-text">
+                  <i>¡Sí es tu primera vez, deja el cero!</i>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Correo electrónico*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="celular" class="form-label">Celular</label>
+                            <input type="number" class="form-control" id="celular" aria-describedby="emailHelp" />
+                            <div class="form-text">
+                                <i>Núnca compartiremos tu información personal</i>
+                            </div>
+                        </div>
+
+                        <br />
+                        <h5 class="modal-title">Tallas y Medídas</h5>
+                        <br />
+                        <div>
+                            <h6 class="modal-title">Disfráz</h6>
+                            <select id="disfraz" class="form-select-sm" aria-label="Default select example">
+                  <option disabled selected>Selecciona tu talla</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                </select>
+                        </div>
+
+                        <br />
+                        <div>
+                            <h6 class="modal-title">Camiseta de ensayo</h6>
+                            <select id="camEnsayo" class="form-select-sm" aria-label="Default select example">
+                  <option disabled selected>Selecciona tu talla</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                </select>
+                        </div>
+                        <br />
+                        <div>
+                            <h6 class="modal-title">Zapatos</h6>
+                            <select id="zapato" class="form-select-sm" aria-label="Default select example">
+                  <option disabled selected>Selecciona tu talla</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                  <option value="46">46</option>
+                  <option value="N/A">N/A</option>
+                </select>
+                        </div>
+                        <br />
+                        <div>
+                            <h5 class="modal-title">Grupo</h5>
+                            <div class="form-text">
+                                <i>Selecciona el grupo o bloque de la comparsa en que deseas
+                    bailar</i
+                  >
+                </div>
+
+                <select
+                  id="grupo"
+                  class="form-select-sm"
+                  aria-label="Default select example"
+                >
+                  <option disabled selected>Escoge un grupo</option>
+                  <option value="Elite">Elite</option>
+                  <option value="2A">2A</option>
+                  <option value="2B">2B</option>
+                  <option value="2C">2C</option>
+                  <option value="2D">2D</option>
+                  <option value="Vikingos">Vikingos</option>
+                  <option value="Sin grupo">No tengo grupo definido</option>
+                </select>
+              </div>
+              <br />
+              <div class="modal-footer">
+                <button
+                  id="btnRegistrar"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-target="#exampleModalToggle2"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                        
+                >
+                  Inscribirme
+                </button>
+              </div>
+              <!-- <button type="submit" class="btn btn-primary">ENVIAR</button> -->
+            </form>
+          </div>
+
+          <div
+            class="modal fade"
+            id="exampleModalToggle2"
+            aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title Toggle2"
+                    id="exampleModalToggleLabel2"
+                  ></h5>
+                  <button
+                    type="button"
+                    id="exit"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body" id="modalBodyToggle2"></div>
+                <div class="modal-footer">
+                  <button
+                    class="btn btn-primary"
+                    id="entendido"
+                    data-bs-target="#exampleModalToggle"
+                    data-bs-toggle="modal"
+                    data-bs-dismiss="modal"
+                  >
+                    Entendido
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- rollers de redes sociales para desktop -->
+      <div class="roller-container">
+        <div class="roller-flex-column">
+          <div class="roller" id="roller-ins">
+            <div class="roller-inner">
+              <a
+                href="https://www.instagram.com/marimondasdelbarrioabajo/?hl=es-la"
+                target="blank"
+                >@marimondasdba</a
+              ><img src="./imagenes/ins.jpg" alt="logo-instagram" />
+            </div>
+          </div>
+          <div class="roller" id="roller-face">
+            <div class="roller-inner">
+              <a
+                href="https://www.facebook.com/pages/category/Personal-Blog/Las-Marimondas-del-Barrio-Abajo-509351969417043/"
+                target="blank"
+                >marimondasdba</a
+              ><img src="./imagenes/face.jpg" alt="logo-facebook" />
+            </div>
+          </div>
+          <div class="roller" id="roller-twit">
+            <div class="roller-inner">
+              <a href="https://twitter.com/marimondasdelba" target="blank"
+                >@marimondasdelBA</a
+              ><img src="./imagenes/twit.jpg" alt="logo-twitter" />
+            </div>
+          </div>
+          <div class="roller" id="roller-wt">
+            <div class="roller-inner">
+              <a
+                href="https://api.whatsapp.com/send?phone=573023621246&text=Hola!%20Quiero%20generar%20saber%20mas%20sobre%20la%20comparsa."
+                target="blank"
+                >(+57) 302 362 1246</a
+              ><img src="./imagenes/wt.jpg" alt="logo-wt" />
+            </div>
+          </div>
+        </div>
+      </div>
+<!--<section class="cuenta-regresiva">
+        <h2>¡Se viene el carnaval 2023!</h2>
+        <hr />
+        <div id="countdown1"></div>
+        <hr />
+      </section>-->
+      <section id="description">
+        <h1>
+          <span>¡Abrimos las puertas del barco cuadro!</span>
+        </h1>
+        <p class="descripcion">
+       ¡Inscripciones abiertas desde el 15 de julio! Prepárate para vivir un evento inigualable. Únete a nosotros y sé parte de la magia del carnaval. ¡No te lo pierdas!
+        </p>
+        <div class="social_media_icon_cont">
+          <div class="social-icon">
+            <a
+              href="https://www.instagram.com/marimondasdelbarrioabajo/?hl=es-la"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://twitter.com/marimondasdelba" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/pages/category/Personal-Blog/Las-Marimondas-del-Barrio-Abajo-509351969417043/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=573023621246&text=Hola!%20Quiero%20generar%20saber%20mas%20sobre%20la%20comparsa.s" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <iframe ¿ id="camisetaPremier" src="https://www.instagram.com/reel/CnCkAQMjDRu/embed" width="90%" height="550px" style="border-radius: 10px 10px"></iframe>
+
+                        <button type="button" class="btn btn-primary1" id="modalOpener" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <p class="text-btn-primary btn" style="cursor: pointer">
+            Inscripciones abiertas
+          </p>
+        </button>
+
+                        <!-- Modal seleccion de adultos o niños data-bs-backdrop="static"-->
+                        <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">
+                                            SELECCIONA UNA CATEGORIA
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="text-align: center">
+                                        <!-- <button type="button" class="btn btn-secondary-sm" data-bs-dismiss="modal">Cerrar</button> -->
+                                        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" id="modalNiños">
+                  NIÑOS
+                </button>
+                                        <button type="button" data-bs-dismiss="modal" id="modalAdultos" class="btn btn-primary">
+                  ADULTOS
+                </button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- <i>###</i> -->
+                                        <i>¿Ya tienes tu código de inscripción? Abona tu pre-inscripción
+                  y obtenlo!</i
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sección de eventos y noticias -->
+
+      <section class="bg-seccion-eventos">
+        <svg
+          class="episode-backgound-top"
+          xmlns="http://www.w3.org/2000/svg"
+          viewbox="0 0 100 100"
+          preserveaspectratio="none"
+        >
+          <polygon fill="white" points="0,0 100,0 0,70" />
+        </svg>
+        <div>
+          <h2 id="nosotros" class="titulo">Nuestra historia</h2>
+        </div>
+        <div class="seccion-eventos">
+          <!-- src="https://www.youtube.com/embed/Roy6iCnaaKc" -->
+          <iframe
+            class="video"
+            width="100"
+            height="50"
+            src="https://www.youtube.com/embed/Roy6iCnaaKc"
+            allow="accelerometer; autoplay;
+                                        encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <!-- <img class="video" src="./imagenes/Feliz Navidad.jpeg" alt="feliz navidad"> -->
+          <div id="event-container">
+            <div>
+              <h2>Eventos</h2>
+              <div class="evento">
+                <div class="fecha">
+                  FEB
+                  <span>10</span>
+                  <span class="dia">Viernes</span>
+                </div>
+                <div class="info">
+                  <div class="info">
+                    <p style="text-decoration: none">Guacherna</p>
+                    <p style="text-decoration: none">Carnaval 2023</p>
+                    <p style="text-decoration: none">Lugar: Sede Comparsa </p>
+                  </div>
+                </div>
+              </div>
+              <div class="evento">
+                <div class="fecha">
+                  FEB
+                  <span>18</span>
+                  <span class="dia">Sábado</span>
+                </div>
+                <div class="info">
+                  <p style="text-decoration: none">Batalla de Flores</p>
+                  <p style="text-decoration: none">Muestra folclorica</p>
+                  <p style="text-decoration: none">
+                    Lugar: Sede Comparsa
+                  </p>
+                </div>
+              </div>
+              <div class="evento">
+                <div class="fecha">
+                  FEB
+                  <span>20</span>
+                  <span class="dia">Lunes</span>
+                </div>
+                <div class="info">
+                  <p style="text-decoration: none">Grán Parada</p>
+                  <p style="text-decoration: none">Desfile folclorico</p>
+                  <p style="text-decoration: none">Lugar: Sede Comparsa</p>
+                </div>
+              </div>
+              <div class="evento">
+                <div class="fecha">
+                  FEB
+                  <br />
+                  <span>09</span>
+                  <span class="dia">Jueves</span>
+                </div>
+                <div class="info">
+                  <p style="text-decoration: none">Video Noche Comparsas</p>
+                  <p style="text-decoration: none">Gran Estreno</p>
+                  <p style="text-decoration: none">Lugar: Comparsa IGTV</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <svg
+          class="episode-backgound-bottom"
+          xmlns="http://www.w3.org/2000/svg"
+          viewbox="0 0 100 100"
+          preserveaspectratio="none"
+        >
+          <polygon fill="white" points="100,100 100,0 0,100" />
+        </svg>
+      </section>
+      <img
+        id="orejas"
+        src="./imagenes/marimonda_orejas_adobespark.png"
+        alt="marimonda"
+      />
+
+      <!-- seccion de preguntas frecuentes -->
+      <section class="bg-seccion-faq">
+        <h2 id="faq" class="titulo">Preguntas frecuentes</h2>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                <b> ¿En qué horario son los ensayos? </b>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                <strong
+                  >Los ensayos de ADULTOS son días de semana en el horario de
+                  7:00 PM a 9:30 PM</strong
+                >, horario ideal para aquellos que estudian o trabajan.
+                <strong
+                  >Los ensayos de los NIÑOS son los sábados a las 4 PM hasta
+                  5:30 PM.</strong
+                >
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                <b
+                  >¿Debo realizar una audición para pertenecer a esta
+                  comparsa?</b
+                >
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                ¡No! Nuestro baile es el de esquina, de pretil, el del
+                barranquillero, debes sacar toda la recocha que lleves por
+                dentro, nos divertimos divirtiendo a la gente.
+                <strong
+                  >Tenemos la puerta abierta para todo aquel que quiera vivir
+                  esta experiencia.</strong
+                >
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                <b>¿Qué me indica el color de mi gorra en el kit de ensayo?</b>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                El color de tu gorra te va a indicar en qué grupo o en qué
+                bloque debes bailar, son 6 bloques con 6 colores diferentes cada
+                uno.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-colapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                <b
+                  >Si se me olvida la camiseta oficial, ¿puedo participar en el
+                  ensayo?</b
+                >
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-colapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFour"
+            >
+              <div class="accordion-body">
+                No, sin el uniforme para ensayar no es permitido que participes
+                en este.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-colapseFive"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                <b>¿Si deseo retirarme, tengo derecho a un reembolso?</b>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-colapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFive"
+            >
+              <div class="accordion-body">
+                Si deseas retirarte, el abono requerido para apartar el cupo
+                desde el principio no es reembolsable, el resto del dinero que
+                hayas abonado, es reembolsable únicamente si te retiraste máximo
+                dos semanas antes del sábado de Carnaval (11 de febrero del
+                2022).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion nuestra musica -->
+      <!-- <section class="bg-seccion-nosotros">
+            <div class="donde_venimos">
+                <h2 class="titulo_seccion_dark1">Nuestra música</h2>
+                <p>Nuestra comparsa se caracteriza por mantener viva la tradición de bailar los ritmos autóctonos de la región Caribe, como lo son el porro, el fandango y el Merecumbé. En la Vía 40 nos acompañan 14 papayeras con 10 músicos cada una, que
+                    te transportan a esa Barranquilla de antes, la tradicional y siempre linda.
+                    <br><br> Los invitamos a disfrutar de nuestra música y a sacar toda la alegría que llevas dentro, recuerda: ¡No es tanto disfrazarte de marimonda, sino los brincos que hay que dar!
+                </p>
+            </div>
+            <div id="podcast">
+                <div>
+                    <iframe class="song" src="https://open.spotify.com/embed/album/6pEAMxei00DtC7r7ilYYkF" allow="encrypted-media"></iframe>
+                </div>
+                <div>
+                    <iframe class="song" src="https://open.spotify.com/embed/track/1VtJjaSVh7M7wtQtuUGnaA" width="100" height="380" allow="encrypted-media"></iframe>
+                </div>
+                <div>
+                    <iframe class="song" src="https://open.spotify.com/embed/track/0yrD5fohtrHtnlRUXtt1C8" width="100" height="380" allow="encrypted-media"></iframe> </div>
+                <div>
+                    <iframe class="song" src="https://open.spotify.com/embed/playlist/3lgGi1jQNsDpxo0SGUW58O" width="100" height="380" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </section> -->
+      <!-- <img id="saltando" src="./imagenes/marimonda_saltando_adobespark.png" alt="marimonda" srcset=""> -->
+
+      <!-- seccion marimondas de honor -->
+      <section class="invitados">
+        <h2 class="titulo_seccion_dark2" id="invitados">Marimondas de honor</h2>
+        <!-- galeria de imagenes -->
+        <div class="galeria">
+          <div class="card" style="width: 20rem">
+            <img src="./imagenes/Caridi.jpeg" alt="ricardo-caridi" />
+            <div class="card-body">
+              <h5 class="card-title">Ricardo Caridi</h5>
+              <p class="card-text">
+                Industrial Barranquillero, heredero de la tradición que impulsó
+                su padre, Don León Caridi, <i>Mecenas del Carnaval</i>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 20rem">
+                                    <img src="./imagenes/Santos.jpg" alt="presidente-santos" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Juan Manuel Santos</h5>
+                                        <p class="card-text">
+                                            Premio Nobel de Paz, lo que tú no sabes es que ahí Paragüita lo invitó a firmar los acuerdos en plena vía 40.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 20rem">
+                                    <img src="./imagenes/verano.jpg" alt="eduardo-verano" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Eduardo Verano y señora</h5>
+                                        <p class="card-text">
+                                            Ex-gobernador del Atlántico y su esposa Liliana Borrero, primera gestora social del Atlántico.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 20rem">
+                                    <img src="./imagenes/Teo.jpg" alt="teo-gutierrez" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Teófilo Gutíerrez</h5>
+                                        <p class="card-text">
+                                            "Teo", campeón indiscutido del futbol colombiano, mejor futbolista de Sudamerica en 2014.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card" style="width: 20rem">
+                                    <img src="./imagenes/Elsa.JPG" alt="elsa-noguera" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Elsa Noguera</h5>
+                                        <p class="card-text">
+                                            Actual Gobernadora del Atlántico, junto a Paragüita dio vida al sueño de devolverle el río a su ciudad, hoy ese sueño se llama
+                                            <i>Grán Malecón del Río</i>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 20rem">
+                                    <img src="./imagenes/Santodomingo.jpeg" alt="pablo-obregon" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pablo Obregón</h5>
+                                        <p class="card-text">
+                                            Presidente de la Fundación Mario Santo Domingo, Representante Permanente de Colombia ante la UNESCO en calidad de Embajador.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+
+                            <!-- sección valores de la agrupación -->
+
+                            <!-- FIN DEL INDEX -->
+                            <section id="sede" class="ubicacion">
+                                <h2>Visita nuestra sede</h2>
+                                <div class="mapa-container">
+                                    <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.1465867235017!2d-74.78744!3d10.99459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d794358bc71%3A0x906842044087076d!2sCra.%2056%20%2349-17%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1598926092209!5m2!1ses-419!2sco"
+                                        height="300" style="border: 0" aria-hidden="false" tabindex="0"></iframe>
+                                </div>
+                            </section>
+
+                            <footer class="text-muted">
+                                <div class="container">
+                                    <p>Marimondas del Barrio Abajo de Paragüita &copy; Copyright 2021</p>
+                                    <div id="accesos" class="float-right">
+                                        <a href="./login.html">Manager Access</a>
+                                    </div>
+                                </div>
+                                <a href="#">Back to top</a>
+                            </footer>
+                            </main>
+                            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js " integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp " crossorigin="anonymous"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+                            <script src="./modal.js"></script>
+                            <script src="./registrarme.js"></script>
+                            <script src="./registrar-niños.js"></script>
+                            <script src="./countdown.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,703 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background-color: turquoise;
+}
+
+header #brand {
+  text-align: center;
+  line-height: 80px;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+}
+
+#mean-login {
+  display: block;
+}
+
+#mean-login #setting a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #e6621f;
+}
+
+#mean-register {
+  display: none;
+}
+
+#mean-register .toast {
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  opacity: 1;
+  width: 95%;
+  margin: 0px auto;
+}
+
+.login {
+  padding: 7%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.login .container-login {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: gray;
+  margin-top: 20px;
+}
+
+.login .container-login p .login-input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 5px;
+  line-height: 35px;
+  padding-left: 5px;
+}
+
+.login .container-login #emailHelp {
+  margin-top: 0px;
+  padding: 0px;
+  display: none;
+}
+
+.login .loginBtn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.login .loginBtn div {
+  background-color: #e6621f;
+  border-style: none;
+  border-radius: 30px;
+  width: 80%;
+  margin: auto;
+  outline: none;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 45px;
+}
+
+.login .loginBtn .registerLink {
+  color: #e6621f;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.login .form-group .form-check-label {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #e6621f;
+  font-weight: 500;
+}
+
+.login .form-group .form-check-input:checked {
+  background-color: #e6621f;
+  border-color: #e6621f;
+  font-size: 13px;
+}
+
+.login .alert-danger {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.landing #fav-title .secondary-title, .landing #product-title .secondary-title, .blur-modal .modal-details .secondary-title, .confirmed h2, .status-pedido .modal-details .secondary-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: gray;
+}
+
+.landing {
+  display: none;
+}
+
+.landing #fav-title {
+  padding: 3%;
+}
+
+.landing .carousel {
+  padding-left: 3%;
+  position: relative;
+  margin: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 14rem 14rem 14rem 14rem 14rem;
+      grid-template-columns: 14rem 14rem 14rem 14rem 14rem;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  overflow: scroll hidden;
+  scroll-behavior: smooth;
+  padding-right: 0%;
+}
+
+.landing .carousel .card {
+  width: 14rem;
+  float: left;
+}
+
+.landing .carousel .card .product-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(black)), url(./images/hamburguesa1.jpg);
+  background-image: linear-gradient(to bottom, transparent 50%, black 100%), url(./images/hamburguesa1.jpg);
+}
+
+.landing .carousel .card .product-image .productname {
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2px;
+  font-weight: 800;
+  font-size: 16px;
+  padding-left: 5px;
+  color: white;
+}
+
+.landing .carousel .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.landing .carousel .card-body .card-subtitle {
+  margin: 0px;
+}
+
+.landing .carousel .card-body .add {
+  color: #e6621f;
+  font-weight: 700;
+}
+
+.landing .float-pedido {
+  padding: 3%;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-weight: 600;
+  display: none;
+}
+
+.landing .float-pedido .card-detailed {
+  background-color: #e6621f;
+  border-radius: 5px;
+}
+
+.landing .float-pedido .card-detailed .card-body {
+  background-color: white;
+  color: black;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card {
+  width: 95%;
+  border: none;
+  margin: 2.5px 0px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row {
+  height: 50px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 img {
+  width: 60px;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 div {
+  padding: 5px 0px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 div h6 {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 div p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 .fav-icon {
+  position: absolute;
+  right: 50px;
+  top: 14px;
+}
+
+.landing .float-pedido .card-detailed .card-body .product-list-pedido .card .row .col-md-4 .fav-icon i {
+  font-size: 20px;
+  color: #e6621f;
+}
+
+.landing .float-pedido .card-detailed .card-body #pedidoBtn {
+  background-color: #e6621f;
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+.landing #product-title {
+  padding: 3%;
+}
+
+.landing #product-list {
+  padding: 3%;
+}
+
+.landing #product-list .card {
+  margin-bottom: 20px;
+  border: none;
+}
+
+.landing #product-list .card .row {
+  height: 50px;
+}
+
+.landing #product-list .card .row .col-md-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+}
+
+.landing #product-list .card .row .col-md-4 img {
+  width: 60px;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.landing #product-list .card .row .col-md-4 div {
+  padding: 5px 0px;
+}
+
+.landing #product-list .card .row .col-md-4 div h6 {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.landing #product-list .card .row .col-md-4 div p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.landing #product-list .card .row .col-md-4 .add-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.landing #product-list .card .row .col-md-4 .add-icon i {
+  font-size: 30px;
+  color: #e6621f;
+}
+
+.landing #product-list .card .row .col-md-4 .fav-icon {
+  position: absolute;
+  right: 50px;
+  top: 14px;
+}
+
+.landing #product-list .card .row .col-md-4 .fav-icon i {
+  font-size: 20px;
+  color: #e6621f;
+}
+
+.landing .logOut {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing .logOut button {
+  background-color: #e6621f;
+  border-style: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 80%;
+  outline: none;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 45px;
+}
+
+.blur-modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: 100px;
+          filter: 100px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: none;
+}
+
+.blur-modal .modal-details {
+  width: 90%;
+  height: 95%;
+  margin: 5%;
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: white;
+  overflow: hidden scroll;
+  scroll-behavior: smooth;
+}
+
+.blur-modal .modal-details .pedido-list {
+  padding: 3%;
+}
+
+.blur-modal .modal-details .pedido-list .card {
+  margin-bottom: 20px;
+  border: none;
+}
+
+.blur-modal .modal-details .pedido-list .card .row {
+  height: 50px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 img {
+  width: 60px;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 div {
+  padding: 5px 0px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 div h6 {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 div p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 .delete-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 .delete-icon i {
+  font-size: 30px;
+  color: #e6621f;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 .fav-icon {
+  position: absolute;
+  right: 50px;
+  top: 14px;
+}
+
+.blur-modal .modal-details .pedido-list .card .row .col-md-4 .fav-icon i {
+  font-size: 20px;
+  color: #e6621f;
+}
+
+.blur-modal .modal-details select option {
+  font-family: "Nunito", sans-serif;
+}
+
+.blur-modal .modal-details #confirm-pedido {
+  font-size: 20px;
+}
+
+.blur-modal .modal-details #cancel-pedido {
+  background-color: white;
+  font-size: 16px;
+  color: #e6621f;
+}
+
+.confirmed {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20%;
+  display: none;
+}
+
+.confirmed #confirmed-vector {
+  width: 80%;
+}
+
+.confirmed p {
+  width: 80%;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+.confirmed .follow-btn {
+  width: 70%;
+}
+
+.confirmed .follow-btn #follow-btn {
+  background-color: #e6621f;
+  border-style: none;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 40px;
+}
+
+.status-pedido {
+  display: none;
+}
+
+.status-pedido .modal-details {
+  width: 90%;
+  height: 95%;
+  margin: 5%;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: white;
+  overflow: hidden scroll;
+  scroll-behavior: smooth;
+}
+
+.status-pedido .modal-details .status-pops {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.status-pedido .modal-details .status-pops .badge {
+  text-align: left;
+  width: 120px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding-left: 12px;
+  margin: 5px 20px;
+}
+
+.status-pedido .modal-details .status-pops .bg-red {
+  background-color: red;
+  opacity: 0.2;
+}
+
+.status-pedido .modal-details .status-pops .bg-orange {
+  background-color: orange;
+  opacity: 0.2;
+}
+
+.status-pedido .modal-details .status-pops .bg-yellow {
+  background-color: gold;
+  opacity: 0.2;
+}
+
+.status-pedido .modal-details .status-pops .bg-green {
+  background-color: green;
+  opacity: 1;
+}
+
+.status-pedido .modal-details .status-pops .bg-gray {
+  background-color: gray;
+  opacity: 0.2;
+}
+
+.status-pedido .modal-details .pedido-list {
+  padding: 3%;
+}
+
+.status-pedido .modal-details .pedido-list .card {
+  margin-bottom: 20px;
+  border: none;
+}
+
+.status-pedido .modal-details .pedido-list .card .row {
+  height: 50px;
+}
+
+.status-pedido .modal-details .pedido-list .card .row .col-md-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+}
+
+.status-pedido .modal-details .pedido-list .card .row .col-md-4 img {
+  width: 60px;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.status-pedido .modal-details .pedido-list .card .row .col-md-4 div {
+  padding: 5px 0px;
+}
+
+.status-pedido .modal-details .pedido-list .card .row .col-md-4 div h6 {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.status-pedido .modal-details .pedido-list .card .row .col-md-4 div p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.status-pedido .modal-details #map {
+  width: 100%;
+  height: 300px;
+}
+
+.status-pedido .modal-details .goBack {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.status-pedido .modal-details .goBack #detail-goback {
+  background-color: white;
+  font-size: 16px;
+  color: #e6621f;
+  border: none;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .login {
+    width: 50%;
+    margin: auto;
+  }
+  .landing {
+    width: 40%;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=login.css.map */

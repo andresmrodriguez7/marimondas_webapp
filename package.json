@@ -1,0 +1,34 @@
+{
+    "name": "webpagemarimondas",
+    "version": "1.0.0",
+    "description": "pagina web v1.0",
+    "engines": {
+        "node": "20.x"
+    },
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "scss": "node-sass -watch scss -o css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andresmrodriguez7/webPageMarimondas.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/andresmrodriguez7/webPageMarimondas/issues"
+    },
+    "homepage": "https://github.com/andresmrodriguez7/webPageMarimondas#readme",
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "helmet": "^4.6.0",
+        "heroku": "^7.59.0",
+        "mongodb": "^4.1.1",
+        "mongoose": "^6.0.2",
+        "node-sass": "^9.0.0",
+        "nodemon": "^2.0.12",
+        "push.js": "^1.0.12"
+    }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./admin.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+    <title>MDBA Manager</title>
+</head>
+
+<body>
+    <header>
+        <div class="bg-green">
+            <span id="brand">Marimondas del Bario Abajo</span>
+
+            <p>
+                <span><small id="fecha-hoy"></small></span>
+            </p>
+        </div>
+        <nav>
+            <ul>
+                <li id="codigos-btn">CODIGOS</li>
+                <li id="inscritos-btn">INSCRITOS</li>
+                <li id="tallas-btn">TALLAS</li>
+                <li id="abonos-btn">ESTADISTICAS</li>
+                <li><a href="https://charts.mongodb.com/charts-dreamable-mgsvi/dashboards/6133a293-5a2a-4b3c-8e1a-1103d02ecf23/charts/6133a293-5a2a-4903-8987-1103d02ecf24">DESCARGAR ADULTOS</a></li>
+                <li><a href="https://charts.mongodb.com/charts-dreamable-mgsvi/dashboards/96726d36-62a3-4188-94f0-3211ca838868/charts/91e87360-45a6-41ff-9b25-03454a1be691">DESCARGAR NIÑOS</a></li>
+                <li>
+                    <div class="btn-secondary" id="prod-nuevo-btn">BUSCAR</div>
+                </li>
+                <li id="get-out">
+                    <i class="fas fa-sign-out-alt"></i> Salida Segura
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <main>
+        <!-- aqui tenemos la seccion donde crear nuevos codigos -->
+        <div id="code-container">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Valor Inscripción</span>
+                <span class="input-group-text">$</span>
+                <input type="number" id="inscripcion" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Valor Abono</span>
+                <span class="input-group-text">$</span>
+                <input type="number" id="abono" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Referencia</span>
+                <input type="text" id="referencia" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" />
+            </div>
+            <select class="form-select input-group mb-3" id="categoria" aria-label="Default select example">
+              <option disabled selected>¿Para quien es este código?</option>
+              <option value="mayores">Marimondas</option>
+              <option value="niños">Marimonditas</option>
+            </select>
+            <div class="input-group mb-3">
+                <input type="text" id="nuevoCodigo" class="form-control" placeholder="nuevo código" style="text-transform: uppercase" value="" onkeyup="javascript:this.value=this.value.toUpperCase();" />
+                <button class="btn btn-outline-secondary" type="button" id="button-crear-code">
+            CREAR
+          </button>
+            </div>
+        </div>
+        <!-- aqui tenemos la tabla de preinscritos -->
+        <div id="table-usuarios" class="table usuarios table-striped table-hover">
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          " width="100%" height="450px" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=5a8a8767-3e7e-4f85-945c-4a4aa7eddc83&maxDataAge=60&theme=light&autoRefresh=true"></iframe>
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+            margin-top: 15px;
+          " width="100%" height="450" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=7dac5b54-5f0a-49cd-a9c6-b36156f34407&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+            margin-top: 15px;
+          " width="100%" height="450px" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=6212b105-80fc-4157-85d4-eac2a37e4044&maxDataAge=60&theme=light&autoRefresh=true"></iframe>
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);margin-top: 15px;
+            " width="100%" height="450px" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=6545df6c-2d82-4752-888b-b59c3c203c74&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+        </div>
+
+        <div id="tallas" class="products">
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          " src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=dadd479f-b5a8-4532-a01f-9ebd3853ce22&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          " src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=464a331f-66af-4508-a1fa-7103e9670f4f&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          " src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=fea3202d-ea23-4299-a486-6ed55235d0d8&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+            <hr />
+            <!-- sección con tallas de los niños -->
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          " width="640" height="480" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=6212b105-80fc-45d1-87f4-eac2a37e4045&maxDataAge=60&theme=light&autoRefresh=true"></iframe>
+            <iframe style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          " width="640" height="480" src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=6212b105-80fc-47df-80ad-eac2a37e4046&maxDataAge=60&theme=light&autoRefresh=true"></iframe>
+        </div>
+
+        <!-- aqui tenemos el formulario para buscar usuarios -->
+        <div id="product-creator" class="product-creator">
+            <div id="buscador-container" class="mb-3">
+                <p>Busqueda por:</p>
+                <label for="exampleFormControlInput1" class="form-label">
+            <i>Documento</i>
+          </label>
+                <input type="number" class="form-control-short" id="search-id" style="border-radius: 5px" />
+                <input class="btn btn-outline-success" id="search-btn" type="button" value="Buscar" />
+                <div id="spinner" class="spinner-border m-5" role="status"></div>
+            </div>
+
+            <div class="mb-3">
+                <p>
+                    <strong style="font-size: 20px" id="buscado-name"></strong>
+
+                    <strong style="font-size: 20px" id="buscado-primerApellido"></strong>
+                </p>
+                <i style="font-size: 15px" id="buscado-inscripcion"></i>
+                <i style="font-size: 15px" id="buscado-saldo"></i>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">e-mail</label
+          >
+          <input type="text" class="form-control" id="buscado-email" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Pagos a la fecha: $</label
+          >
+          <input type="number" class="form-control-short" id="buscado-abono" />
+        </div>
+
+        <div id="talla-selector" class="mb-4">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Talla disfraz:</label
+          >
+          <select name="disfraz" id="talla-disfraz">
+            <option value="default">-</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+          <label for="exampleFormControlInput1" class="form-label"
+            >Talla camiseta:</label
+          >
+          <select name="camiseta" id="talla-camiseta">
+            <option value="default">-</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+             <option value="N/A">N/A</option>
+          </select>
+          <label for="exampleFormControlInput1" class="form-label"
+            >Talla zapatos:</label
+          >
+          <select name="zapatos" id="talla-zapatos">
+            <option value="default">-</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="N/A">N/A</option>
+          </select>
+          <label for="exampleFormControlInput1" class="form-label"
+            >Grupo:</label
+          >
+          <select name="grupo" id="talla-grupo">
+            <option value="default">-</option>
+            <option value="Elite">Elite</option>
+            <option value="2A">2A</option>
+            <option value="2B">2B</option>
+            <option value="2C">2C</option>
+            <option value="2D">2D</option>
+            <option value="Vikingos">Vikingos</option>
+          </select>
+          <label for="exampleFormControlInput1" class="form-label"
+            >Kit:</label
+          >
+          <select name="kit" id="buscado-kit">
+            <option value="Default">-</option>
+            <option value="Entregado">ENTREGADO</option>
+            <option value="Pendiente">PENDIENTE</option>
+          </select>
+        </div>
+        <br />
+        <div class="btn-container">
+          <div class="btn-primary crear" id="modificar-btn">
+            ACTUALIZAR DATOS
+          </div>
+          <div class="btn-primary borrar" id="borrar-btn">BORRAR USUARIO</div>
+        </div>
+      </div>
+      <br />
+
+      <div id="abonos-section">
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="640"
+          height="480"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=a75f5af5-34c4-4770-af2b-786b15870c11&maxDataAge=60&theme=light&autoRefresh=true"
+        ></iframe>
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="640"
+          height="480"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=f00019ef-caf0-42d8-991e-cd23bfe87d3c&maxDataAge=300&theme=light&autoRefresh=true"
+        ></iframe>
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="640"
+          height="480"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=7e534b2f-fbe2-43e7-82b1-2c35abb816a5&maxDataAge=300&theme=light&autoRefresh=true"
+        ></iframe>
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="420"
+          height="340"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=a45100b6-fba8-4e55-bd50-fe1d0d9b3757&maxDataAge=&60theme=light&autoRefresh=true"
+        ></iframe>
+        <hr />
+        <!-- estadisticas de las marimonditas -->
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="640"
+          height="480"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=6212b105-80fc-4e09-80bf-eac2a37e4048&maxDataAge=60&theme=light&autoRefresh=true"
+        ></iframe>
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="640"
+          height="480"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=6212b105-80fc-49bb-82cc-eac2a37e4047&maxDataAge=60&theme=light&autoRefresh=true"
+        ></iframe>
+        <iframe
+          style="
+            background: #ffffff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px 0 rgba(70, 76, 79, 0.2);
+          "
+          width="640"
+          height="480"
+          src="https://charts.mongodb.com/charts-dreamable-mgsvi/embed/charts?id=1430e3cf-7ad8-42b1-8d44-84952a6e49ca&maxDataAge=60&theme=light&autoRefresh=true"
+        ></iframe>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

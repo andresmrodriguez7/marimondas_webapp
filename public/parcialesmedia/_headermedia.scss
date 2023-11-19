@@ -1,0 +1,53 @@
+header {
+    padding: 50px 100px;
+    box-sizing: border-box;
+    width: 100vw;
+    // posicion logo
+    .logo_menu {
+        margin-top: -40px;
+        margin-left: 0;
+        width: 170px;
+        height: 150px;
+    }
+    // posicion y funcionamiento menu hamburguesa
+    #menu_checker {
+        display: none;
+    }
+    #menu_close {
+        display: none;
+    }
+    #menu_open {
+        display: none;
+    }
+    #menu {
+        display: inline-block;
+        width: auto;
+        background-color: $bg-primary;
+        box-sizing: border-box;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-sizing: border-box;
+            li {
+                text-transform: uppercase;
+                text-align: left;
+                line-height: 28px;
+                letter-spacing: 0;
+                margin: 2px 19px;
+                font-size: 1.5vw;
+                border-top: none;
+                a {
+                    text-decoration: none;
+                    color: $font-dark;
+                    font-family: $font-primary;
+                    font-weight: bold;
+                    &:hover {
+                        text-shadow: 0px 0px 1px gray;
+                        color: #5e2129;
+                    }
+                }
+            }
+        }
+    }
+}
