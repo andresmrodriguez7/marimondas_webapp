@@ -373,18 +373,18 @@ main {
             width: 100%;
             grid-gap: 10px;
             grid-template-columns: repeat(3, 20rem);
-            grid-template-rows: repeat(2, 450px);
+            grid-template-rows: repeat(2, 33vw);
             .card {
                 box-shadow: 1px 5px 15px gray;
                 height: auto;
                 margin: 20px 0px;
-                width: 22vw;
+                width: 22vw!important;
                 box-sizing: border-box;
                 img {
                     width: 20vw;
                     height: 20vw;
                     border-radius: 2pt;
-                    margin: 30px auto;
+                    margin: 40px auto;
                 }
             }
         }
