@@ -1,18 +1,10 @@
 header {
-  background-color: #35cabb;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: rgb(53, 202, 187);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   padding: 0px 35px;
 }
-
 header #brand {
   width: 200px;
   line-height: 80px;
@@ -21,24 +13,16 @@ header #brand {
   font-weight: 600;
   color: white;
 }
-
 header #fecha-hoy {
   color: white;
   margin: 0px 20px;
   font-family: "Nunito", sans-serif;
 }
-
 header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   margin-top: 18px;
 }
-
 header nav ul li {
   list-style: none;
   margin: 0px 20px;
@@ -50,11 +34,9 @@ header nav ul li {
   line-height: 40px;
   cursor: pointer;
 }
-
 header nav ul li:hover {
   text-shadow: 0px 0px 5px white;
 }
-
 header nav ul li .btn-secondary {
   background-color: white;
   color: #e6621f;
@@ -65,7 +47,6 @@ header nav ul li .btn-secondary {
   width: 200px;
   border-bottom: none;
 }
-
 header nav ul li:last-child {
   font-size: 18px;
   color: white;
@@ -76,11 +57,8 @@ header nav ul li:last-child {
 }
 
 #table-usuarios {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  flex-flow: wrap;
   width: 65%;
   margin: auto;
   height: 100%;
@@ -91,28 +69,19 @@ header nav ul li:last-child {
   padding: 3%;
   display: none;
 }
-
 #product-creator #buscador-container #spinner {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 1000;
 }
-
 #product-creator .form-label {
   font-family: "Nunito", sans-serif;
 }
-
 #product-creator .btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 #product-creator .btn-container .crear {
   background-color: #35cabb;
   color: white;
@@ -124,12 +93,9 @@ header nav ul li:last-child {
   margin: 0px 10px;
   cursor: pointer;
 }
-
 #product-creator .btn-container .crear:hover {
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
-
 #product-creator .btn-container .borrar {
   background-color: #e6621f;
   color: white;
@@ -140,10 +106,8 @@ header nav ul li:last-child {
   width: 250px;
   cursor: pointer;
 }
-
 #product-creator .btn-container .borrar:hover {
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes deploy {
@@ -163,34 +127,24 @@ header nav ul li:last-child {
     width: 25%;
   }
 }
-
 #tallas {
   display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   gap: 30px;
   width: 95%;
   margin: 20px auto;
 }
-
 #tallas iframe {
   width: 400px;
   height: 500px;
 }
 
 #abonos-section {
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   gap: 10px;
   width: 100%;
   margin: 20px auto;
 }
-
 #abonos-section iframe {
   width: 400px;
   height: 320px;
@@ -199,17 +153,10 @@ header nav ul li:last-child {
 @media (max-width: 600px) {
   header {
     width: 100%;
-    background-color: #35cabb;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background-color: rgb(53, 202, 187);
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     padding: 0px 5px;
     text-align: center;
   }
@@ -231,15 +178,9 @@ header nav ul li:last-child {
   }
   header nav ul {
     padding: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-flow: column nowrap;
+    align-content: center;
   }
   header nav ul li {
     list-style: none;
@@ -275,8 +216,6 @@ header nav ul li:last-child {
     margin: auto 5%;
   }
   #table-usuarios {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 90%;
     height: 100%;
@@ -284,13 +223,8 @@ header nav ul li:last-child {
     display: none;
   }
   #product-creator {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-flow: column nowrap;
     padding: 3%;
     display: none;
   }
@@ -304,13 +238,8 @@ header nav ul li:last-child {
     font-family: "Nunito", sans-serif;
   }
   #product-creator .btn-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #product-creator .btn-container .crear {
     background-color: #35cabb;
@@ -335,27 +264,18 @@ header nav ul li:last-child {
     cursor: pointer;
   }
   #product-creator .btn-container .borrar:hover {
-    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   }
   #product-creator #talla-selector {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+    flex-flow: column;
   }
   #product-creator #talla-selector label {
     margin-top: 5px !important;
   }
   #tallas {
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-flow: column nowrap;
     gap: 30px;
     width: 85%;
     margin: 40px auto;
@@ -366,10 +286,7 @@ header nav ul li:last-child {
     margin: auto;
   }
   #abonos-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-flow: column nowrap;
     gap: 10px;
     width: 95%;
     margin: 20px auto;
@@ -379,5 +296,4 @@ header nav ul li:last-child {
     height: 400px;
     margin: auto;
   }
-}
-/*# sourceMappingURL=admin.css.map */
+}/*# sourceMappingURL=admin.css.map */
