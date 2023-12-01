@@ -1,316 +1,97 @@
 header {
-  background-color: #35cabb;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0px 35px;
+    background-color: rgb(53, 202, 187);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0px 35px;
 }
 
-header .logo_menu {
-  width: 200px;
-  height: 150px;
+header #brand {
+    width: 200px;
+    height: 150px;
 }
 
 header #fecha-hoy {
-  color: white;
-  margin: 0px 20px;
-  font-family: "Nunito", sans-serif;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+    color: white;
+    margin: 0px 20px;
+    font-family: "Nunito", sans-serif;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  margin-top: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 18px;
 }
 
 header nav ul li {
-  list-style: none;
-  margin: 0px 20px;
-  text-decoration: none;
-  color: white;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 40px;
-  cursor: pointer;
-}
-
-header nav ul li:hover {
-  text-shadow: 0px 0px 5px white;
-}
-
-header nav ul li .btn-secondary {
-  background-color: white;
-  color: #e6621f;
-  border-radius: 20px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: 600;
-  width: 100px;
-  border-bottom: none;
-}
-
-header nav ul li:last-child {
-  font-size: 15px;
-  color: white;
-}
-
-#code-container {
-  margin: auto 30%;
-}
-
-#table-usuarios {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  width: 65%;
-  margin: auto;
-  height: 100%;
-  display: none;
-}
-
-#product-creator {
-  padding: 3%;
-  display: none;
-}
-
-#product-creator #buscador-container #spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1000;
-}
-
-#product-creator .form-label {
-  font-family: "Nunito", sans-serif;
-}
-
-#product-creator .btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#product-creator .btn-container .crear {
-  background-color: #35cabb;
-  color: white;
-  border-radius: 20px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: 600;
-  width: 250px;
-  margin: 0px 10px;
-  cursor: pointer;
-}
-
-#product-creator .btn-container .crear:hover {
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-}
-
-#product-creator .btn-container .borrar {
-  background-color: #e6621f;
-  color: white;
-  border-radius: 20px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: 600;
-  width: 250px;
-  cursor: pointer;
-}
-
-#product-creator .btn-container .borrar:hover {
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-}
-
-@-webkit-keyframes deploy {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 25%;
-  }
-}
-
-@keyframes deploy {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 25%;
-  }
-}
-
-#tallas {
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  gap: 30px;
-  width: 95%;
-  margin: 20px auto;
-}
-
-#tallas iframe {
-  width: 400px;
-  height: 500px;
-}
-
-#abonos-section {
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  gap: 10px;
-  width: 100%;
-  margin: 20px auto;
-}
-
-#abonos-section iframe {
-  width: 400px;
-  height: 320px;
-}
-
-@media (max-width: 600px) {
-  header {
-    width: 100%;
-    background-color: #35cabb;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0px 5px;
-    text-align: center;
-  }
-  header #brand {
-    width: 100%;
-    line-height: 80px;
-    font-family: "Nunito", sans-serif;
-    font-size: 21px;
-    text-align: center;
-    font-weight: bold;
-  }
-  header #fecha-hoy {
-    color: white;
-    margin: 0px 5px;
-    font-family: "Nunito", sans-serif;
-  }
-  header nav {
-    margin: 0px;
-  }
-  header nav ul {
-    padding: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  header nav ul li {
     list-style: none;
-    margin: 0px 0px;
+    margin: 0px 20px;
     text-decoration: none;
     color: white;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 40px;
     cursor: pointer;
-  }
-  header nav ul li:hover {
+}
+
+header nav ul li:hover {
     text-shadow: 0px 0px 5px white;
-  }
-  header nav ul li .btn-secondary {
+}
+
+header nav ul li .btn-secondary {
     background-color: white;
     color: #e6621f;
     border-radius: 20px;
     line-height: 40px;
     text-align: center;
     font-weight: 600;
-    width: 200px;
+    width: 100px;
     border-bottom: none;
-    margin: auto;
-  }
-  header nav ul li:last-child {
+}
+
+header nav ul li:last-child {
     font-size: 15px;
     color: white;
-    margin-top: 10px;
-  }
-  #code-container {
-    margin: auto 5%;
-  }
-  #table-usuarios {
-    display: -webkit-box;
-    display: -ms-flexbox;
+}
+
+#code-container {
+    margin: auto 30%;
+}
+
+#table-usuarios {
     display: flex;
-    width: 90%;
-    height: 100%;
+    flex-flow: wrap;
+    width: 65%;
     margin: auto;
+    height: 100%;
     display: none;
-  }
-  #product-creator {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+}
+
+#product-creator {
     padding: 3%;
     display: none;
-  }
-  #product-creator #buscador-container #spinner {
-    position: fixed;
-    top: 45%;
-    left: 30%;
+}
+
+#product-creator #buscador-container #spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 1000;
-  }
-  #product-creator .form-label {
+}
+
+#product-creator .form-label {
     font-family: "Nunito", sans-serif;
-  }
-  #product-creator .btn-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
+}
+
+#product-creator .btn-container {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #product-creator .btn-container .crear {
+    flex-direction: row;
+}
+
+#product-creator .btn-container .crear {
     background-color: #35cabb;
     color: white;
     border-radius: 20px;
@@ -318,64 +99,225 @@ header nav ul li:last-child {
     text-align: center;
     font-weight: 600;
     width: 250px;
-    margin: 20px auto;
+    margin: 0px 10px;
     cursor: pointer;
-  }
-  #product-creator .btn-container .borrar {
+}
+
+#product-creator .btn-container .crear:hover {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#product-creator .btn-container .borrar {
+    background-color: #e6621f;
     color: white;
     border-radius: 20px;
     line-height: 40px;
     text-align: center;
     font-weight: 600;
     width: 250px;
-    margin: auto;
-    background-color: #e6621f;
     cursor: pointer;
-  }
-  #product-creator .btn-container .borrar:hover {
-    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  }
-  #product-creator #talla-selector {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-  }
-  #product-creator #talla-selector label {
-    margin-top: 5px !important;
-  }
-  #tallas {
+}
+
+#product-creator .btn-container .borrar:hover {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes deploy {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 25%;
+    }
+}
+
+@keyframes deploy {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 25%;
+    }
+}
+
+#tallas {
     display: none;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
     gap: 30px;
-    width: 85%;
-    margin: 40px auto;
-  }
-  #tallas iframe {
-    width: 100%;
-    height: 500px;
-    margin: auto;
-  }
-  #abonos-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    gap: 10px;
     width: 95%;
     margin: 20px auto;
-  }
-  #abonos-section iframe {
-    width: 100%;
-    height: 400px;
-    margin: auto;
-  }
 }
+
+#tallas iframe {
+    width: 400px;
+    height: 500px;
+}
+
+#abonos-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    gap: 10px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+#abonos-section iframe {
+    width: 400px;
+    height: 320px;
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        background-color: rgb(53, 202, 187);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 0px 5px;
+        text-align: center;
+    }
+    header #brand {
+        width: 100%;
+        line-height: 80px;
+        font-family: "Nunito", sans-serif;
+        font-size: 21px;
+        text-align: center;
+        font-weight: bold;
+    }
+    header #fecha-hoy {
+        color: white;
+        margin: 0px 5px;
+        font-family: "Nunito", sans-serif;
+    }
+    header nav {
+        margin: 0px;
+    }
+    header nav ul {
+        padding: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+    }
+    header nav ul li {
+        list-style: none;
+        margin: 0px 0px;
+        text-decoration: none;
+        color: white;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    header nav ul li:hover {
+        text-shadow: 0px 0px 5px white;
+    }
+    header nav ul li .btn-secondary {
+        background-color: white;
+        color: #e6621f;
+        border-radius: 20px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: 600;
+        width: 200px;
+        border-bottom: none;
+        margin: auto;
+    }
+    header nav ul li:last-child {
+        font-size: 15px;
+        color: white;
+        margin-top: 10px;
+    }
+    #code-container {
+        margin: auto 5%;
+    }
+    #table-usuarios {
+        display: flex;
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: none;
+    }
+    #product-creator {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 3%;
+        display: none;
+    }
+    #product-creator #buscador-container #spinner {
+        position: fixed;
+        top: 45%;
+        left: 30%;
+        z-index: 1000;
+    }
+    #product-creator .form-label {
+        font-family: "Nunito", sans-serif;
+    }
+    #product-creator .btn-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #product-creator .btn-container .crear {
+        background-color: #35cabb;
+        color: white;
+        border-radius: 20px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: 600;
+        width: 250px;
+        margin: 20px auto;
+        cursor: pointer;
+    }
+    #product-creator .btn-container .borrar {
+        color: white;
+        border-radius: 20px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: 600;
+        width: 250px;
+        margin: auto;
+        background-color: #e6621f;
+        cursor: pointer;
+    }
+    #product-creator .btn-container .borrar:hover {
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+    #product-creator #talla-selector {
+        display: flex;
+        flex-flow: column;
+    }
+    #product-creator #talla-selector label {
+        margin-top: 5px !important;
+    }
+    #tallas {
+        display: none;
+        flex-flow: column nowrap;
+        gap: 30px;
+        width: 85%;
+        margin: 40px auto;
+    }
+    #tallas iframe {
+        width: 100%;
+        height: 500px;
+        margin: auto;
+    }
+    #abonos-section {
+        flex-flow: column nowrap;
+        gap: 10px;
+        width: 95%;
+        margin: 20px auto;
+    }
+    #abonos-section iframe {
+        width: 100%;
+        height: 400px;
+        margin: auto;
+    }
+}
+
+
 /*# sourceMappingURL=admin.css.map */

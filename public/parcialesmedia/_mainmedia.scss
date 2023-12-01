@@ -2,476 +2,487 @@
 //     width: 300px!important;
 // }
 main {
-    .roller-container {
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 22%;
-        width: 40%;
-        .roller-flex-column {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
-            .roller {
-                width: 50%;
-                height: 45px;
-                margin: 1px 0;
-                border-radius: 0 20px 20px 0;
-                padding: 0 2% 0 3%;
-                margin-left: -40%;
-                .roller-inner {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-                    height: 100%;
-                    img {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 10px;
-                    }
-                    a {
-                        text-decoration: none;
-                        font-style: italic;
-                        color: white;
-                        font-weight: 500;
-                        font-size: 1em;
-                    }
-                }
-                &:hover {
-                    margin-left: 0;
-                    transition: ease-in-out 0.6s;
-                }
-            }
-            #roller-ins {
-                background-image: linear-gradient( 225deg, $bg-gradient-top 0%, $bg-gradient-bottom 100%);
-            }
-            #roller-face {
-                background-color: rgb(33, 83, 156);
-            }
-            #roller-twit {
-                background-color: rgb(69, 199, 251);
-            }
-            #roller-wt {
-                background-color: rgb(1, 188, 55);
-            }
-        }
-    }
-    .cuenta-regresiva {
-        font-family: $font-descripcion;
-        font-size: 75px;
-        text-align: center;
-        margin-top: 0px;
-        width: 100%;
-        #countdown1 {
-            .row {
-                display: flex;
-                flex-flow: row;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                .countdown-container {
-                    width: 200px;
-                    padding: 20px;
-                    margin: 0px 50px;
-                    background-color: rgba(228, 89, 228, 0.2);
-                    -webkit-border-radius: 6px;
-                    -moz-border-radius: 6px;
-                    border-radius: 6px;
-                    .number {
-                        font-size: 40px;
-                        text-align: center;
-                        padding-top: 20px;
-                        font-weight: 500;
-                        color: purple;
-                        background-color: transparent;
-                        height: 90px;
-                    }
-                    .concept {
-                        font-size: 30px;
-                        text-align: center;
-                        color: #000000;
-                        font-family: $font-descripcion;
-                    }
-                }
-            }
-        }
-    }
-    //posicionamiento y estilo de la descripcion
-    #description {
-        padding-left: 6.9vw;
-        padding-top: 150px;
-        width: 100vw;
-        h1 {
-            line-height: 84px;
-            font-size: 64px;
-            width: auto;
-            color: $font-dark;
-            margin-top: 0;
-            #dot {
-                color: $font-dot;
-                font-size: 64px;
-            }
-        }
-        .descripcion {
-            line-height: 28px;
-            font-size: 22px;
-            width: 700px;
-            height: 48px;
-            margin-top: 20px;
-        }
-        .descripcion::before {
-            content: " ";
-        }
-        .social_media_icon_cont {
-            display: none;
-            .social-icon {
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-between;
-                width: auto;
-                height: 250px;
-                margin-left: -100px;
-                a {
-                    text-decoration-color: none;
-                    i {
-                        font-size: 2em;
-                    }
-                }
-            }
-        }
-        #camisetaPremier {
-            width: auto;
-            height: 550px;
-            position: absolute;
-            margin-top: 120px;
-            right: 50px;
-            box-shadow: 1px 1px 20px gray;
-            overflow: hidden;
+  .roller-container {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 22%;
+    width: 40%;
+    .roller-flex-column {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      .roller {
+        width: 50%;
+        height: 45px;
+        margin: 1px 0;
+        border-radius: 0 20px 20px 0;
+        padding: 0 2% 0 3%;
+        margin-left: -40%;
+        .roller-inner {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          img {
+            width: 30px;
+            height: 30px;
             border-radius: 10px;
+          }
+          a {
+            text-decoration: none;
+            font-style: italic;
+            color: white;
+            font-weight: 500;
+            font-size: 1em;
+          }
         }
-        //posicionamiento y estilo del boton "inscribete"
-        .btn-primary1 {
-            margin-top: 120px;
-            margin-bottom: 150px;
-            width: 226px;
-            height: 56px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 8px gray;
-            &:hover {
-                background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
-                color: white;
-            }
-            .text-btn-primary {
-                font-size: 18px;
-                font-weight: 700;
-            }
+        &:hover {
+          margin-left: 0;
+          transition: ease-in-out 0.6s;
         }
+      }
+      #roller-ins {
+        background-image: linear-gradient(
+          225deg,
+          $bg-gradient-top 0%,
+          $bg-gradient-bottom 100%
+        );
+      }
+      #roller-face {
+        background-color: rgb(33, 83, 156);
+      }
+      #roller-twit {
+        background-color: rgb(69, 199, 251);
+      }
+      #roller-wt {
+        background-color: rgb(1, 188, 55);
+      }
     }
-    #orejas {
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        top: 1700px;
-        right: 100px;
-    }
-    // seccion de eventos y nuestra historia
-    .bg-seccion-eventos {
-        height: 1042.5px;
-        padding-top: 0;
-        padding-bottom: 0;
-        // background-image: linear-gradient(225deg, $bg-gradient-top 0%, $bg-gradient-bottom 100%);
-        background: linear-gradient( 45deg, #dff7bd 15%, #40f2ec 45%, #add2ed 75%, #ffb2ff 100%);
-        //titulo de seccion nuestra historia
-        .titulo {
-            margin-bottom: 2.5vw;
-            font-size: 50px;
-            line-height: 45px;
-            font-weight: 800;
-            margin-top: 10px;
-            text-shadow: 1px 1px gray;
-        }
-        .seccion-eventos {
-            margin: 0 10% 0 5%;
-            display: grid;
-            grid-template-columns: 70% 30%;
-            grid-template-rows: 100%;
-            border-radius: 2px;
-            box-sizing: border-box;
-            .video {
-                align-content: stretch;
-                border-radius: 5px;
-                width: 100%;
-                height: 600px;
-            }
-            //contenedor de los eventos
-            #event-container {
-                padding: 0 5px;
-                display: flex;
-                flex-flow: row;
-                justify-content: center;
-                color: $font-light;
-                font-family: $font-title;
-                font-size: 16px;
-                line-height: 25px;
-                text-shadow: 1px 1px gray;
-                h2 {
-                    color: $font-light;
-                    font-family: $font-title;
-                    font-size: 25px;
-                    line-height: 25px;
-                    font-weight: 800;
-                    width: 100%;
-                    padding: 3px 0px;
-                    border-bottom: solid;
-                    border-bottom-style: solid white;
-                    border-bottom-width: 3px;
-                    margin-top: 0;
-                }
-                .evento {
-                    padding: 10px 0px 10px 10px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    width: 100%;
-                    box-sizing: border-box;
-                    line-height: 25px;
-                    margin-top: 0;
-                    .fecha {
-                        background-color: rgb(92, 86, 179);
-                        width: 95px;
-                        height: 100px;
-                        font-size: 20px;
-                        line-height: 25px;
-                        text-align: center;
-                        letter-spacing: 2px;
-                        color: white;
-                        font-family: Times, "Times New Roman", serif;
-                        span {
-                            font-size: 50px;
-                            line-height: 50px;
-                            color: white;
-                        }
-                    }
-                    .info p {
-                        margin: 0;
-                        font-size: 20px;
-                    }
-                    .info p:first-child {
-                        font-weight: 800;
-                    }
-                }
-            }
-        }
-    }
-    //seccion de preguntas frecuentes
-    .bg-seccion-faq {
-        width: 100vw;
-        height: 400px;
-        padding-left: 50px;
-        margin-top: 40px;
-        .titulo {
-            margin-bottom: 2.5vw;
-            font-family: $font-title;
-            font-size: 50px;
-            line-height: 45px;
-            font-weight: 800;
-            margin-top: 10px;
-        }
-        #accordionPanelsStayOpenExample {
-            margin: 5px auto;
-            width: 80%;
-            .accordion-item.accordion-header {
-                font-family: $font-title;
-                font-weight: 600;
-            }
-        }
-    }
-    // seccion nuestra musica
-    .bg-seccion-nosotros {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+  }
+  .cuenta-regresiva {
+    font-family: $font-descripcion;
+    font-size: 75px;
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    #countdown1 {
+      .row {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 500px;
-        padding-left: 50px;
-        padding-right: 0;
-        box-sizing: border-box;
-        margin-top: 80px;
-        .donde_venimos {
-            width: 30%;
-            height: auto;
-            margin: 20.4px 0 0 0;
-            box-sizing: border-box;
-            .titulo_seccion_dark1 {
-                margin-left: 0;
-                width: 60%;
-                font-family: $font-title;
-                font-size: 48px;
-                font-weight: 600;
-                color: $font-dark;
-                margin-top: 10px;
-            }
-            p {
-                margin-left: 0;
-                width: auto;
-                height: auto;
-                margin: 0;
-                font-weight: 300;
-            }
-        }
-        #podcast {
-            display: grid;
-            justify-content: center;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 15vw 15vw;
-            column-gap: 30px;
-            row-gap: 30px;
-            width: 65%;
-            height: auto;
-            box-sizing: border-box;
-            padding: 10px;
-            margin-right: 30px;
-            div {
-                width: 100%;
-                height: 100%;
-                .song {
-                    width: 100%;
-                    height: 100%;
-                    box-sizing: border-box;
-                    border-radius: 5px;
-                }
-            }
-        }
-    }
-    #saltando {
-        position: absolute;
-        width: 400px;
-        height: 650px;
-        top: 2750px;
-        right: 0px;
-        box-sizing: border-box;
-    }
-    // seccion de marimondas de honor
-    .invitados {
-        margin-top: 64px;
-        box-sizing: border-box;
-        margin-left: 50px;
-        .titulo_seccion_dark2 {
-            margin-bottom: 2.5vw;
-            margin-left: 0;
-            width: 481px;
-            font-size: 48px;
-            line-height: 62px;
-        }
-        .galeria {
-            display: grid;
-            margin: auto;
-            width: 100%;
-            grid-gap: 10px;
-            grid-template-columns: repeat(3, 20rem);
-            grid-template-rows: repeat(2, 450px);
-            .card {
-                box-shadow: 1px 5px 15px gray;
-                height: auto;
-                margin: 20px 0px;
-                width: 100% !important;
-                box-sizing: border-box;
-                img {
-                    width: 20vw;
-                    height: 20vw;
-                    border-radius: 2pt;
-                    margin: 10px auto;
-                }
-            }
-        }
-    }
-    // seccion alguno de nuestros temas
-    .temas {
-        display: flex;
-        flex-direction: column;
-        margin-top: 35px;
-        margin-bottom: 34px;
         width: 100%;
-        .titulo_seccion_dark3 {
-            width: 586px;
-            font-size: 48px;
-            line-height: 62px;
-            margin-left: 100px;
+        .countdown-container {
+          width: 200px;
+          padding: 20px;
+          margin: 0px 50px;
+          background-color: rgba(228, 89, 228, 0.2);
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          border-radius: 6px;
+          .number {
+            font-size: 40px;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 500;
+            color: purple;
+            background-color: transparent;
+            height: 90px;
+          }
+          .concept {
+            font-size: 30px;
+            text-align: center;
+            color: #000000;
+            font-family: $font-descripcion;
+          }
         }
-        .iconos {
-            margin: 40px auto;
-            display: grid;
-            grid-template-columns: repeat(4, 260px);
-            grid-template-rows: repeat(1, 200px 64px);
-            row-gap: 29px;
-            grid-auto-flow: column;
-            grid-auto-rows: auto;
-            img {
-                width: 200px;
-                height: 200px;
-                margin: 0;
-            }
-            p {
-                width: 220px;
-                margin: 0;
-            }
-        }
+      }
     }
-    // sección de ultimas novedades
-    .bg-seccion-novedades {
-        padding: 213px 0 141px 0;
-        width: 100vw;
-        height: 36vw;
-        .titulo_seccion_light {
-            width: 692px;
-            font-size: 36px;
-            line-height: 42px;
-            font-size: 48px;
-            line-height: 62px;
-        }
-        .btn-primary {
-            width: 345px;
-            height: 56px;
-            .text-btn-primary {
-                margin-top: 17px;
-                font-size: 18px;
-                line-height: 24px;
-            }
-             ::after {
-                content: " LOS EPISODIOS";
-            }
-        }
+  }
+  //posicionamiento y estilo de la descripcion
+  #description {
+    padding-left: 6.9vw;
+    padding-top: 150px;
+    width: 100vw;
+    h1 {
+      line-height: 84px;
+      font-size: 64px;
+      width: auto;
+      color: $font-dark;
+      margin-top: 0;
+      #dot {
+        color: $font-dot;
+        font-size: 64px;
+      }
     }
-    .ubicacion {
-        margin: 0 0 100px 0;
-        h2 {
-            width: 586px;
-            font-size: 48px;
-            line-height: 62px;
-            margin-left: 100px;
-        }
-        .mapa-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 auto;
-            width: 70vw;
-            #mapa {
-                width: 70vw;
-                box-shadow: 0px 5px 15px 1px gray;
-            }
-        }
+    .descripcion {
+      line-height: 28px;
+      font-size: 22px;
+      width: 700px;
+      height: 48px;
+      margin-top: 20px;
     }
-    footer {
+    .descripcion::before {
+      content: " ";
+    }
+    .social_media_icon_cont {
+      display: none;
+      .social-icon {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         justify-content: space-between;
-        padding: 0px 6.944vw 31px 6.944vw;
-        box-sizing: border-box;
-        margin-top: 0px;
+        width: auto;
+        height: 250px;
+        margin-left: -100px;
+        a {
+          text-decoration-color: none;
+          i {
+            font-size: 2em;
+          }
+        }
+      }
     }
+    #camisetaPremier {
+      width: auto;
+      height: 550px;
+      position: absolute;
+      margin-top: 120px;
+      right: 50px;
+      box-shadow: 1px 1px 20px gray;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    //posicionamiento y estilo del boton "inscribete"
+    .btn-primary1 {
+      margin-top: 120px;
+      margin-bottom: 150px;
+      width: 226px;
+      height: 56px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 8px gray;
+      &:hover {
+        background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+        color: white;
+      }
+      .text-btn-primary {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+  #orejas {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 1700px;
+    right: 100px;
+  }
+  // seccion de eventos y nuestra historia
+  .bg-seccion-eventos {
+    height: 1042.5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    // background-image: linear-gradient(225deg, $bg-gradient-top 0%, $bg-gradient-bottom 100%);
+    background: linear-gradient(
+      45deg,
+      #dff7bd 15%,
+      #40f2ec 45%,
+      #add2ed 75%,
+      #ffb2ff 100%
+    );
+    //titulo de seccion nuestra historia
+    .titulo {
+      margin-bottom: 2.5vw;
+      font-size: 50px;
+      line-height: 45px;
+      font-weight: 800;
+      margin-top: 10px;
+      text-shadow: 1px 1px gray;
+    }
+    .seccion-eventos {
+      margin: 0 10% 0 5%;
+      display: grid;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: 100%;
+      border-radius: 2px;
+      box-sizing: border-box;
+      .video {
+        align-content: stretch;
+        border-radius: 5px;
+        width: 100%;
+        height: 600px;
+      }
+      //contenedor de los eventos
+      #event-container {
+        padding: 0 5px;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        color: $font-light;
+        font-family: $font-title;
+        font-size: 16px;
+        line-height: 25px;
+        text-shadow: 1px 1px gray;
+        h2 {
+          color: $font-light;
+          font-family: $font-title;
+          font-size: 25px;
+          line-height: 25px;
+          font-weight: 800;
+          width: 100%;
+          padding: 3px 0px;
+          border-bottom: solid;
+          border-bottom-style: solid white;
+          border-bottom-width: 3px;
+          margin-top: 0;
+        }
+        .evento {
+          padding: 10px 0px 10px 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 100%;
+          box-sizing: border-box;
+          line-height: 25px;
+          margin-top: 0;
+          .fecha {
+            background-color: rgb(92, 86, 179);
+            width: 95px;
+            height: 100px;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            letter-spacing: 2px;
+            color: white;
+            font-family: Times, "Times New Roman", serif;
+            span {
+              font-size: 50px;
+              line-height: 50px;
+              color: white;
+            }
+          }
+          .info p {
+            margin: 0;
+            font-size: 20px;
+          }
+          .info p:first-child {
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+  //seccion de preguntas frecuentes
+  .bg-seccion-faq {
+    width: 100vw;
+    height: 400px;
+    padding-left: 50px;
+    margin-top: 40px;
+    .titulo {
+      margin-bottom: 2.5vw;
+      font-family: $font-title;
+      font-size: 50px;
+      line-height: 45px;
+      font-weight: 800;
+      margin-top: 10px;
+    }
+    #accordionPanelsStayOpenExample {
+      margin: 5px auto;
+      width: 80%;
+      .accordion-item.accordion-header {
+        font-family: $font-title;
+        font-weight: 600;
+      }
+    }
+  }
+  // seccion nuestra musica
+  .bg-seccion-nosotros {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100vw;
+    height: 500px;
+    padding-left: 50px;
+    padding-right: 0;
+    box-sizing: border-box;
+    margin-top: 80px;
+    .donde_venimos {
+      width: 30%;
+      height: auto;
+      margin: 20.4px 0 0 0;
+      box-sizing: border-box;
+      .titulo_seccion_dark1 {
+        margin-left: 0;
+        width: 60%;
+        font-family: $font-title;
+        font-size: 48px;
+        font-weight: 600;
+        color: $font-dark;
+        margin-top: 10px;
+      }
+      p {
+        margin-left: 0;
+        width: auto;
+        height: auto;
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+    #podcast {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 15vw 15vw;
+      column-gap: 30px;
+      row-gap: 30px;
+      width: 65%;
+      height: auto;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-right: 30px;
+      div {
+        width: 100%;
+        height: 100%;
+        .song {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  #saltando {
+    position: absolute;
+    width: 400px;
+    height: 650px;
+    top: 2750px;
+    right: 0px;
+    box-sizing: border-box;
+  }
+  // seccion de marimondas de honor
+  .invitados {
+    margin-top: 64px;
+    box-sizing: border-box;
+    margin-left: 50px;
+    .titulo_seccion_dark2 {
+      margin-bottom: 2.5vw;
+      margin-left: 0;
+      width: 481px;
+      font-size: 48px;
+      line-height: 62px;
+    }
+    .galeria {
+      display: grid;
+      margin: auto;
+      width: 100%;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 20rem);
+      grid-template-rows: repeat(2, auto);
+      align-items: start;
+      .card {
+        box-shadow: 1px 5px 15px gray;
+        height: auto;
+        margin: 20px 0px;
+        width: 22vw !important;
+        box-sizing: border-box;
+        img {
+          width: 20vw;
+          height: 20vw;
+          border-radius: 2pt;
+          margin: 40px auto;
+        }
+      }
+    }
+  }
+  // seccion alguno de nuestros temas
+  .temas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-bottom: 34px;
+    width: 100%;
+    .titulo_seccion_dark3 {
+      width: 586px;
+      font-size: 48px;
+      line-height: 62px;
+      margin-left: 100px;
+    }
+    .iconos {
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(4, 260px);
+      grid-template-rows: repeat(1, 200px 64px);
+      row-gap: 29px;
+      grid-auto-flow: column;
+      grid-auto-rows: auto;
+      img {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+      }
+      p {
+        width: 220px;
+        margin: 0;
+      }
+    }
+  }
+  // sección de ultimas novedades
+  .bg-seccion-novedades {
+    padding: 213px 0 141px 0;
+    width: 100vw;
+    height: 36vw;
+    .titulo_seccion_light {
+      width: 692px;
+      font-size: 36px;
+      line-height: 42px;
+      font-size: 48px;
+      line-height: 62px;
+    }
+    .btn-primary {
+      width: 345px;
+      height: 56px;
+      .text-btn-primary {
+        margin-top: 17px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      ::after {
+        content: " LOS EPISODIOS";
+      }
+    }
+  }
+  .ubicacion {
+    margin: 0 0 100px 0;
+    h2 {
+      width: 586px;
+      font-size: 48px;
+      line-height: 62px;
+      margin-left: 100px;
+    }
+    .mapa-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      width: 70vw;
+      #mapa {
+        width: 70vw;
+        box-shadow: 0px 5px 15px 1px gray;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0px 6.944vw 31px 6.944vw;
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
 }
