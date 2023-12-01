@@ -13,19 +13,17 @@ header {
   padding: 0px 35px;
 }
 
-header #brand {
+header .logo_menu {
   width: 200px;
-  line-height: 80px;
-  font-family: "Nunito", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
+  height: 150px;
 }
 
 header #fecha-hoy {
   color: white;
   margin: 0px 20px;
   font-family: "Nunito", sans-serif;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 header nav ul {
@@ -62,12 +60,12 @@ header nav ul li .btn-secondary {
   line-height: 40px;
   text-align: center;
   font-weight: 600;
-  width: 200px;
+  width: 100px;
   border-bottom: none;
 }
 
 header nav ul li:last-child {
-  font-size: 18px;
+  font-size: 15px;
   color: white;
 }
 
@@ -168,8 +166,8 @@ header nav ul li:last-child {
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   gap: 30px;
   width: 95%;
   margin: 20px auto;
@@ -181,6 +179,7 @@ header nav ul li:last-child {
 }
 
 #abonos-section {
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
