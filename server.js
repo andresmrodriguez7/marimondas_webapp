@@ -15,12 +15,7 @@ server.listen(port, () =>
 );
 server.use(express.static("public"));
 
-server.use(function(req, res, next) {
-if ((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {
-res.redirect(307, 'https://' + req.get('Host') + req.url);
-} else
-next();
-});
+
 
 const Usuarios = mongoose.model("usuarios", {
     nombres: String,
