@@ -65,7 +65,7 @@ async function usarCodigo(params) {
     let json = await response.json();
     console.log(json);
     if (json.status == 200) {
-        alert(json.message)
+       console.log(json.message)
     }
     if (json.status == 500) {
         alert(json.message);
@@ -190,7 +190,8 @@ btnRegistrar.addEventListener("click", () => {
         let cambiarCodigo = {
             codigo: valorCodigo,
         }
+         crearUsuario(nuevoUsuario);
         usarCodigo(cambiarCodigo);
-        crearUsuario(nuevoUsuario);
+       
     }
 });
