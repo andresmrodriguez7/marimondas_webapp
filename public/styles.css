@@ -14,9 +14,9 @@ header {
 }
 
 header .logo_menu {
-  width: 180px;
-  height: 140px;
-  margin-top: -35px;
+  width: 200px;
+  height: 90px;
+  margin-top: -8px;
 }
 
 header #menu_checker {
@@ -305,7 +305,10 @@ main .bg-seccion-eventos {
   padding: 0;
   width: 100vw;
   height: 1203.5px;
-  background: linear-gradient(45deg, #dff7bd 15%, #40f2ec 45%, #add2ed 75%, #ffb2ff 100%);
+  background: linear-gradient(45deg, #F0BB45 15%, 
+                            #C6933F 35%, 
+                            #AF5217 55%, 
+                            #733554 100%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -653,10 +656,10 @@ footer .disclaimer p:first-child {
     width: 100vw;
   }
   header .logo_menu {
-    margin-top: -80px;
+    margin-top: -30px;
     margin-left: 0;
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 150px;
   }
   header #menu_checker {
     display: none;
@@ -915,7 +918,10 @@ footer .disclaimer p:first-child {
     height: 1042.5px;
     padding-top: 0;
     padding-bottom: 0;
-    background: linear-gradient(45deg, #dff7bd 15%, #40f2ec 45%, #add2ed 75%, #ffb2ff 100%);
+    background: linear-gradient(45deg, #F0BB45 15%, 
+                            #C6933F 35%, 
+                            #AF5217 55%, 
+                            #733554 100%);
   }
   main .bg-seccion-eventos .titulo {
     margin-bottom: 2.5vw;
