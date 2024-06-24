@@ -373,7 +373,7 @@ main .bg-seccion-eventos .seccion-eventos #event-container {
 }
 
 main .bg-seccion-eventos .seccion-eventos #event-container h2 {
-  color: #FFFFFF;
+  color: white;
   font-family: "Nunito", sans-serif;
   font-size: 25px;
   line-height: 25px;
@@ -403,7 +403,7 @@ main .bg-seccion-eventos .seccion-eventos #event-container .evento {
 }
 
 main .bg-seccion-eventos .seccion-eventos #event-container .evento .fecha {
-  background-color: #5c56b3;
+  background-color: #C6933F;
   border-radius: 3px;
   width: 90px;
   height: 100px;
@@ -436,7 +436,7 @@ main .bg-seccion-eventos .seccion-eventos #event-container .evento .fecha .dia {
 
 main .bg-seccion-eventos .seccion-eventos #event-container .evento .info p {
   margin: 0;
-  color: #120c5b;
+  color: white;
   font-size: 20 px;
 }
 
@@ -886,7 +886,7 @@ footer .disclaimer p:first-child {
     width: 320px;
     height: 450px;
     position: absolute;
-    margin-top: 350px;
+    margin-top: 250px;
     right: 30px;
     -webkit-box-shadow: 1px 1px 20px gray;
             box-shadow: 1px 1px 20px gray;
