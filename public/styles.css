@@ -202,8 +202,9 @@ main #description .descripcion {
   line-height: 20px;
   font-size: 18px;
   font-family: "Nunito", sans-serif;
-  font-weight: 300;
+  font-weight: 600;
    margin-top: 20px;
+  
 }
 
 main #description .social_media_icon_cont {
@@ -840,7 +841,7 @@ footer .disclaimer p:first-child {
     line-height: 84px;
     font-size: 64px;
     width: auto;
-    color: #060A24;
+    color: #2D2926;
     margin-top: 0;
   }
   main #description h1 #dot, main #description .descripcion #dot {
@@ -849,7 +850,7 @@ footer .disclaimer p:first-child {
   }
   main #description .descripcion {
     line-height: 28px;
-    font-size: 22px;
+    font-size: 24px;
     width: 700px;
     height: 48px;
     margin-top: 20px;
