@@ -951,7 +951,7 @@ footer .disclaimer p:first-child {
         align-content: stretch;
     border-radius: 5px;
     width: 100%;
-    height: 600px;
+    height: 100%;
   }
   main .bg-seccion-eventos .seccion-eventos #event-container {
     padding: 0 5px;
@@ -966,7 +966,7 @@ footer .disclaimer p:first-child {
         -ms-flex-pack: center;
             justify-content: center;
     color: #FFFFFF;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     line-height: 25px;
     text-shadow: 1px 1px gray;
@@ -1003,7 +1003,7 @@ footer .disclaimer p:first-child {
     margin-top: 0;
   }
   main .bg-seccion-eventos .seccion-eventos #event-container .evento .fecha {
-    background-color: #5c56b3;
+    background-color: #C6933F;
     width: 95px;
     height: 100px;
     font-size: 20px;
@@ -1021,9 +1021,11 @@ footer .disclaimer p:first-child {
   main .bg-seccion-eventos .seccion-eventos #event-container .evento .info p {
     margin: 0;
     font-size: 20px;
+    color: white;
   }
   main .bg-seccion-eventos .seccion-eventos #event-container .evento .info p:first-child {
     font-weight: 800;
+    color: white;
   }
   main .bg-seccion-faq {
     width: 100vw;
