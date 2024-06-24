@@ -188,10 +188,10 @@ main {
     // background-image: linear-gradient(225deg, $bg-gradient-top 0%, $bg-gradient-bottom 100%);
     background: linear-gradient(
       45deg,
-      #733554 15%,
-      #C6933F 45%,
-      #AF5217 75%,
-      #F0BB45 100%
+      #F0BB45 15%, 
+                            #C6933F 35%, 
+                            #AF5217 55%, 
+                            #733554 100%
     );
     //titulo de seccion nuestra historia
     .titulo {
