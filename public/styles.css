@@ -1030,7 +1030,7 @@ footer .disclaimer p:first-child {
   }
   main .bg-seccion-faq {
     width: 100vw;
-    height: 400px;
+    height: auto;
     padding-left: 50px;
     margin-top: 40px;
   }
